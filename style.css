@@ -1,0 +1,62 @@
+@font-face {
+	font-family: Roboto;
+	src: url('roboto.ttf');
+}
+div {
+	display: flex;
+	font-family: Roboto, Regular;
+}
+.sidebar {
+	cursor: grabbing;
+}
+a { cursor: grab; color: white; }
+a:active {
+	color: blue;
+	cursor: pointer;
+}
+.button {
+	flex-direction: column;
+	background-color: #b57edc;
+	color: white;
+	padding: 0.3em;
+	width: 400px;
+	height: 275px;
+	text-align: right;
+	display: flex;
+	border-radius: 22px;
+	margin: 5px 8px;
+}
+.big {
+	text-align: center; 
+	color: white;
+}
+.background-div {
+	cursor: cell;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: lightblue;
+	z-index: 1;
+}
+.foreground-div {
+	cursor: crosshair;
+	font-weight: bolder;
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	transform: translate(-5%, -50%);
+	border-style: ridge;
+}
+.thoughtsbox {
+	cursor: crosshair;
+	font-weight: bolder;
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 40%;
+	border-style: ridge;
+	flex-direction: column;
+}

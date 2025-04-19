@@ -10,25 +10,28 @@ div {
 	display: flex;
 	font-family: Roboto, Regular;
 }
-.sidebar {
-	cursor: grabbing;
+a {
+	cursor: grab;
+	color: white;
 }
-a { cursor: grab; color: white; }
+
 a:active {
 	color: blue;
 	cursor: pointer;
 }
+
 .button {
 	flex-direction: column;
-	background-color: #b57edc;
+	border: 5px solid white;
 	color: white;
-	padding: 0.3em;
-	width: 400px;
-	height: 275px;
+	width: 40%;
+	height: 32%;
 	text-align: right;
 	display: flex;
-	border-radius: 22px;
-	margin: 5px 8px;
+	border-radius: 2%;
+	cursor: grabbing;
+	margin: 1% 1%;
+	padding: 1%;
 }
 .big {
 	text-align: center; 
@@ -50,17 +53,8 @@ a:active {
 	position: absolute;
 	z-index: 2;
 	top: 50%;
-	left: 50%;
+	right: -3%;
 	transform: translate(-5%, -50%);
-	border-style: ridge;
-}
-.thoughtsbox {
-	cursor: crosshair;
-	font-weight: bolder;
-	position: absolute;
-	z-index: 2;
-	top: 50%;
-	left: 40%;
 	border: 5px solid white;
-	flex-direction: column;
+		border-radius: 2vh;
 }

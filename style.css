@@ -61,6 +61,6 @@ a:active {
 	z-index: 2;
 	top: 50%;
 	left: 40%;
-	border-style: solid;
+	border: 5px solid white;
 	flex-direction: column;
 }

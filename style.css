@@ -1,40 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-body {
-background-image: url("img/paper.jpeg");
+
+@font-face {
+	font-family: Roboto;
+	src: url('roboto.ttf');
 }
-h1 {
-font-family: "Great Vibes", cursive;
-font-weight: 400;
-font-style: normal;
-font-size: 12vh;
-text-align: center;
-color: white;
-margin: auto;
+
+.fancy {
+	font-family: "Great Vibes", cursive;
 }
-h2 {
-font-family: "Great Vibes", cursive;
-font-weight: 400;
-font-style: normal;
-font-size: 8vh;
-text-align: center;
-color: white;
-margin: auto;
+
+html {
+	font-size: 4vh;
+	display: flex;
+	font-family: Roboto, Regular;
+	justify-content: flex-end;
+	align-items: flex-start;
+	flex-direction: row;
+	overflow: hidden;
+	cursor: all-scroll;
 }
-h3 {
-color: white;
-text-align: center;
-}
-.container {
-display: flex;
-height: 500px;
-position: relative;
-border: 8px solid white;
-}
+
 a {
 	cursor: grab;
 	color: white;
 }
+
 a:active {
 	color: blue;
 	cursor: pointer;
+}
+
+img {
+	z-index: 1;
+	height: 10vh;
+}
+.foreground-div {
+	cursor: crosshair;
+	font-weight: bolder;
+	position: absolute;
+	z-index: 2;
+	top: 50vh;
+	right: 0vh;
+	transform: translate(-5vh, -20vw);
+	color: white;
+	border: 5px solid white;
+	border-radius: 2vh;
+	padding: 1vw;
 }

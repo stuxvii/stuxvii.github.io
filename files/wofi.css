@@ -1,0 +1,25 @@
+/* this is the css file for wofi, the app launcher set up in the sway config */
+window {
+margin: 5px;
+border: 2px solid black;
+background-color: black;
+}
+
+#input {
+margin: 5px;
+border: 2px solid black;
+background-color: black;
+}
+
+#inner-box {
+margin: 5px;
+border: 2px solid black;
+background-color: black;
+}
+
+#text{
+color: white;
+}
+#text:selected {
+color: black;
+}

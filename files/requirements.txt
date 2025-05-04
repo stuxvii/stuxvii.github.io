@@ -1,3 +1,4 @@
+sway (of course you need sway)
 wezterm
 i3status
 wofi

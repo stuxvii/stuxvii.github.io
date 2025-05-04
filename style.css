@@ -1,15 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @font-face {
 	font-family: Roboto;
 	src: url('roboto.ttf');
 }
+
 .fancy {
-font-family: "Great Vibes", cursive;
+	font-family: "Great Vibes", cursive;
 }
-div {
+
+html {
+	font-size: 4vh;
 	display: flex;
 	font-family: Roboto, Regular;
+	justify-content: flex-end;
+	align-items: flex-start;
+	flex-direction: row;
+	overflow: hidden;
+	cursor: all-scroll;
 }
+
 a {
 	cursor: grab;
 	color: white;
@@ -20,41 +30,20 @@ a:active {
 	cursor: pointer;
 }
 
-.button {
-	flex-direction: column;
-	border: 5px solid white;
-	color: white;
-	width: 40%;
-	height: 32%;
-	text-align: right;
-	display: flex;
-	border-radius: 2%;
-	cursor: grabbing;
-	margin: 1% 1%;
-	padding: 1%;
-}
-.big {
-	text-align: center; 
-	color: white;
-}
-.background-div {
-	cursor: cell;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: lightblue;
+img {
 	z-index: 1;
+	height: 10vh;
 }
 .foreground-div {
 	cursor: crosshair;
 	font-weight: bolder;
 	position: absolute;
 	z-index: 2;
-	top: 50%;
-	right: -3%;
-	transform: translate(-5%, -50%);
+	top: 50vh;
+	right: 0vh;
+	transform: translate(-5vh, -20vw);
+	color: white;
 	border: 5px solid white;
-		border-radius: 2vh;
+	border-radius: 2vh;
+	padding: 1vw;
 }

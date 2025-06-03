@@ -1,49 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-@font-face {
-	font-family: Roboto;
-	src: url('roboto.ttf');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap');
+/*YES WE ABSOLUTELY DO NEED THIS WEBSITE TO HAVE ANIMATIONS.
+ANY OTHER QUESTIONS????????????????????????????????????? */
+:root {
+    --colour1:#222222;
+    --colour2: #2b2f35;
+    --size: 128px;
+}
+@keyframes movebg{
+    0% {background-position: right 0px bottom 0px;}
+    100% {background-position: right var(--size) bottom var(--size);}
 }
 
-.fancy {
-	font-family: "Great Vibes", cursive;
+@keyframes titleintro {
+    0% {rotate: 2deg;}
+    100% {rotate: -2deg;}
 }
 
-html {
-	font-size: 4vh;
-	display: flex;
-	font-family: Roboto, Regular;
-	justify-content: flex-end;
-	align-items: flex-start;
-	flex-direction: row;
-	overflow: hidden;
-	cursor: all-scroll;
+@keyframes pagecontent {
+    0% {rotate: -2deg;}
+    100% {rotate: 2deg;}
+}
+@keyframes spin {
+    0% {rotate: 0deg;}
+    100% {rotate: 1440deg;}
+}
+@keyframes splash {
+    0% {font-size: 2vh;}
+    50% {font-size: 5vh;}
+    100% {font-size: 2vh;}
+}
+body {
+    overflow: scroll;
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+    background: repeating-conic-gradient(#222222 0 25%, #2b2f35 0 50%) ;
+    background-size: var(--size) var(--size);
+    margin: 0;
+    padding: 0;
+    animation-name: movebg;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
+.titol {
+    font-size: 8vh;
+    position: relative;
+    text-align: center;
+    animation-name: titleintro;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    margin: 0;
+    padding: 0;
+}
+strong {
+    font-size: 0.6em;
+    background-color: #bfbfbf;
+    color: black;
+    border-radius: 0.2em;
+}
+.splash {
+    box-shadow: #222222;
+    text-shadow: #ff0000 -1px -1px;
+    font-size: 3vh;
+    position: relative;
+    text-align: center;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    z-index: 300;
+    left: 9vw;
+    top: -2vh;
+    margin: 0;
+    padding: 0;   
+}
+.titlebar {
+    font-size: 3em;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: pagecontent;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+.container {
+    margin: 10px;
+    margin-top: -30px;
+    font-size: 2em;
+    display: grid;
+    grid-template-areas: 
+    "menu content";
+    height: 500px;
+    grid-template-columns: 4fr 3fr;
+    position: relative;
+    background-color: white;
+    padding: 8px;
+    gap: 10px;
+}
+
+.container > div {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.container > div.menu {
+  grid-area: menu;
+}
+.container > div.content {
+  grid-area: content;
+  overflow: auto;
+}
 a {
-	cursor: grab;
-	color: white;
+    color: #fff;
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+a:hover, a:active {
+    color: rgb(18, 112, 219)
+}
+ul {
+    margin-top: 10px;
+}
+li {
+    margin-left: -30px;
+    padding-top: 10px;
+    list-style-type: none;
+}
+li:hover {
+    background-color: white;
+    color: black;
+    border-color: white;
 }
 
-a:active {
-	color: blue;
-	cursor: pointer;
-}
-
-img {
-	z-index: 1;
-	height: 10vh;
-}
-.foreground-div {
-	cursor: crosshair;
-	font-weight: bolder;
-	position: absolute;
-	z-index: 2;
-	top: 50vh;
-	right: 0vh;
-	transform: translate(-5vh, -20vw);
-	color: white;
-	border: 5px solid white;
-	border-radius: 2vh;
-	padding: 1vw;
+.speeeeeen {
+    animation-name: spin;
+    animation-duration: 3s;
 }

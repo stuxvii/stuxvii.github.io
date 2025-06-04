@@ -81,3 +81,13 @@ function animationtoggle() {
     animate = true;
   }
 }
+
+var hasTouchScreen = false;
+
+if ("maxTouchPoints" in navigator) {
+    hasTouchScreen = navigator.maxTouchPoints > 0;
+} 
+
+if (hasTouchScreen) {
+    alert('PLEASE!!! I BEG YOU!!! DO NOT VISIT THIS WEBSITE ON MOBILE, it will look horrid, so come back when you have access to a computor,, \n\n\n or just rotate your device sideways and MAYBE it will look nice :)');
+}

@@ -44,7 +44,10 @@ body {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-
+.unfunnyjoke {
+    font-size: 1.2em;
+    text-decoration: underline;
+}
 .titol {
     font-size: 8vh;
     position: relative;
@@ -56,6 +59,7 @@ body {
     animation-timing-function: ease-in-out;
     margin: 0;
     padding: 0;
+    text-decoration: wavy underline;
 }
 strong {
     font-size: 0.6em;
@@ -97,7 +101,7 @@ strong {
     grid-template-areas: 
     "menu content";
     height: 500px;
-    grid-template-columns: 4fr 3fr;
+    grid-template-columns: 4fr 5fr;
     position: relative;
     background-color: white;
     padding: 8px;
@@ -124,11 +128,11 @@ a:hover, a:active {
     color: rgb(18, 112, 219)
 }
 ul {
-    margin-top: 10px;
+    margin-top: 0px; /* this is stupid why do i need to make this say zero */
 }
 li {
-    margin-left: -30px;
-    padding-top: 10px;
+    margin-left: -40px;
+    padding-top: 0px;
     list-style-type: none;
 }
 li:hover {

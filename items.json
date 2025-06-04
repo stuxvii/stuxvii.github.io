@@ -128,6 +128,42 @@
         {
             "name": "The Mewity Rating",
             "link": "mwrtng/index.html"
+        },
+        {
+            "name": "Easy Arch Installer",
+            "link": "https://github.com/classy-giraffe/easy-arch"
+        },
+        {
+            "name": "Microsoft Windows Activation Scripts",
+            "link": "https://massgrave.dev/"
+        },
+        {
+            "name": "Downloads for nearly every single Windows version",
+            "link": "https://massgrave.dev/genuine-installation-media"
+        },
+        {
+            "name": "cobalt.tools",
+            "tag": "goated youtube video download tool",
+            "link": "https://cobalt.tools/"
+        },
+        {
+            "name": "Windows 93",
+            "link": "https://www.windows93.net/"
+        }
+    ],
+    "gudlinux": [
+        {
+            "name": "Arch Linux",
+            "link": "https://archlinux.org/download/"
+        },
+        {
+            "name": "Linux Mint",
+            "link": "https://linuxmint.com/"
+        },
+        {
+            "name": "Pop!_OS",
+            "tag": "Good nVidia support",
+            "link": "https://system76.com/pop/"
         }
     ],
     "cred": [
@@ -140,6 +176,10 @@
             "name": "w3schools",
             "tag": "CSS part of the website",
             "link": "https://www.w3schools.com/"
+        },
+        {
+            "name": "google fonts",
+            "link": "https://fonts.google.com/"
         },
         {
             "name": "geeksforgeeks",

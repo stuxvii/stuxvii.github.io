@@ -1,201 +1,25 @@
 {
-    "tools": [
+    "acdbxoptigames": [
         {
-            "name": "Windows Optimization Script",
-            "link": "https://raw.githubusercontent.com/Zusier/Zusiers-optimization-Batch/refs/heads/master/Zusier%20AIO.bat",
-            "dl": true,
-            "filename": "Zusier AIO Optimizer Script.bat"
+            "link": "https://gofile.io/d/aTAnHR",
+            "name": "Balatro",
+            "tag": "PC Version"
         },
         {
-            "name": "Ventoy",
-            "tag": "Quite nice USB Multiboot tool",
-            "link": "https://www.ventoy.net/"
-        },
-        {
-            "tag": "What if Chrome was actually good?",
-            "name": "Ungoogled Chromium",
-            "link": "https://github.com/ungoogled-software/ungoogled-chromium/"
-        },
-        {
-            "name": "Vesktop",
-            "link": "https://github.com/Vencord/Vesktop",
-            "tag": "Discord Client"
-        },
-        {
-            "tag": "It's fast!",
-            "link": "https://gopeed.com/",
-            "name": "Gopeed Download Manager"
-        },
-        {
-            "name": "MPV",
-            "tag": "Media Player",
-            "link": "https://mpv.io/"
-        },
-        {
-            "name": "Visual Studio Code",
-            "link": "https://code.visualstudio.com/",
-            "tag": "Coding centered text editor"
-        },
-        {
-            "name": "Sublime Text",
-            "tag": "Normal text editor",
-            "link": "https://www.sublimetext.com/"
-        },
-        {
-            "link": "https://cobalt.tools/",
-            "tag": "goated social media video download tool",
-            "name": "cobalt.tools"
-        },
-        {
-            "name": "smtube",
-            "tag": "Lightweight YouTube client",
-            "link": "https://www.smtube.org/"
-        },
-        {
-            "link": "https://httpd.apache.org/",
-            "tag": "For advanced users",
-            "name": "Apache HTTP Server"
-        }
-    ],
-    "rnggamelist": [
-        {
-            "name": "Super Mario 4 Jugadores",
-            "tag": "Old but gold",
-            "link": "https://carlosxdjavgames.altervista.org/wp-content/niveles.php"
-        },
-        {
-            "name": "Mindustry",
-            "link": "https://mindustrygame.github.io/"
-        },
-        {
-            "link": "https://www.haxball.com/",
-            "name": "Haxball"
-        },
-        {
-            "tag": "Prism Launcher, Cracked",
-            "name": "Minecraft",
-            "link": "https://github.com/Diegiwg/PrismLauncher-Cracked"
-        },
-        {
-            "name": "Minecraft",
-            "link": "https://github.com/stuxvii/acid-launcher",
-            "tag": "Acid Launcher, Cracked"
-        },
-        {
-            "name": "Sober (Roblox on Linux)",
-            "link": "https://sober.vinegarhq.org/#introducing-sober"
-        },
-        {
-            "name": "SuperTuxKart",
-            "link": "https://supertuxkart.net/"
-        },
-        {
-            "name": "Sonolus",
-            "link": "https://sonolus.com/en"
-        }
-    ],
-    "misc": [
-        {
-            "name": "The Mewity Rating",
-            "link": "mwrtng/index.html"
-        },
-        {
-            "link": "https://github.com/classy-giraffe/easy-arch",
-            "name": "Easy Arch Installer"
-        },
-        {
-            "name": "Microsoft Windows Activation Scripts",
-            "link": "https://massgrave.dev/"
-        },
-        {
-            "link": "https://massgrave.dev/genuine-installation-media",
-            "name": "Downloads for nearly every single Windows version"
-        },
-        {
-            "name": "Windows 93",
-            "link": "https://www.windows93.net/"
-        }
-    ],
-    "gudlinux": [
-        {
-            "link": "https://archlinux.org/download/",
-            "name": "Arch Linux"
-        },
-        {
-            "name": "Linux Mint",
-            "link": "https://linuxmint.com/"
-        },
-        {
-            "name": "Pop!_OS",
-            "link": "https://system76.com/pop/",
-            "tag": "Good nVidia support"
-        }
-    ],
-    "games": [
-        {
-            "name": "SteamRIP",
-            "link": "https://www.steamrip.com/"
-        },
-        {
-            "link": "https://gog-games.to/",
-            "name": "GOG Games"
-        },
-        {
-            "link": "https://fitgirl-repacks.site/",
-            "name": "Fitgirl Repacks"
-        },
-        {
-            "link": "https://cs.rin.ru/forum/viewforum.php?f=32",
-            "tag": "Forum, Login needed",
-            "name": "cs.rin.ru"
-        },
-        {
-            "link": "https://flashpointarchive.org/downloads",
-            "name": "Flashpoint Archive",
-            "tag": "Flash and other web games"
-        },
-        {
-            "tag": "Not really recommended, maybe as a last resort?",
-            "name": "Internet Archive",
-            "link": "https://archive.org/"
-        }
-    ],
-    "emu": [
-        {
-            "tag": "Super Nintendo Entertainment System",
-            "name": "snes9x",
-            "link": "https://www.snes9x.com/"
-        },
-        {
-            "tag": "Nintendo 64",
-            "name": "Mupen64Plus",
-            "link": "https://mupen64plus.org/"
-        },
-        {
-            "tag": "PlayStation 2",
-            "name": "PCSX2",
-            "link": "https://pcsx2.net/"
-        },
-        {
-            "name": "PPSSPP",
-            "tag": "PlayStation Portable",
-            "link": "https://www.ppsspp.org/"
-        },
-        {
-            "name": "redream",
-            "link": "https://redream.io/",
-            "tag": "Dreamcast"
+            "link": "about:blank",
+            "name": "Balatro",
+            "tag": "Mobile Version"
         }
     ],
     "cred": [
         {
+            "link": "https://developer.mozilla.org/",
             "name": "mdn docs",
-            "tag": "Javascript part of the website",
-            "link": "https://developer.mozilla.org/"
+            "tag": "Javascript part of the website"
         },
         {
-            "name": "w3schools",
             "link": "https://www.w3schools.com/",
+            "name": "w3schools",
             "tag": "CSS part of the website"
         },
         {
@@ -208,26 +32,244 @@
             "tag": "Both"
         },
         {
-            "tag": "the checkerboard thingy yk",
             "link": "https://stackoverflow.com/questions/35361986/css-gradient-checkerboard-pattern",
-            "name": "Background"
+            "name": "Background",
+            "tag": "the checkerboard thingy yk"
         },
         {
+            "link": "https://github.com/glreno/oneko",
             "name": "Oneko",
-            "tag": "ohoho you're so portuguese",
-            "link": "https://github.com/glreno/oneko"
+            "tag": "ohoho you're so portuguese"
         }
     ],
-    "acdbxoptigames": [
+    "emu": [
         {
-            "name": "Balatro",
-            "tag": "PC Version",
-            "link": "https://gofile.io/d/aTAnHR"
+            "link": "https://www.snes9x.com/",
+            "name": "snes9x",
+            "tag": "Super Nintendo Entertainment System"
         },
         {
-            "name": "Balatro",
-            "tag": "Android Version",
-            "link": "https://gofile.io/d/n72s83"
+            "link": "https://mupen64plus.org/",
+            "name": "Mupen64Plus",
+            "tag": "Nintendo 64"
+        },
+        {
+            "link": "https://pcsx2.net/",
+            "name": "PCSX2",
+            "tag": "PlayStation 2"
+        },
+        {
+            "link": "https://www.ppsspp.org/",
+            "name": "PPSSPP",
+            "tag": "PlayStation Portable"
+        },
+        {
+            "link": "https://redream.io/",
+            "name": "redream",
+            "tag": "Dreamcast"
+        }
+    ],
+    "games": [
+        {
+            "link": "https://www.steamrip.com/",
+            "name": "SteamRIP"
+        },
+        {
+            "link": "https://gog-games.to/",
+            "name": "GOG Games"
+        },
+        {
+            "link": "https://fitgirl-repacks.site/",
+            "name": "Fitgirl Repacks"
+        },
+        {
+            "link": "https://cs.rin.ru/forum/viewforum.php?f=32",
+            "name": "cs.rin.ru",
+            "tag": "Forum, Login needed"
+        },
+        {
+            "link": "https://flashpointarchive.org/downloads",
+            "name": "Flashpoint Archive",
+            "tag": "Flash and other web games"
+        },
+        {
+            "link": "https://archive.org/",
+            "name": "Internet Archive",
+            "tag": "Not really recommended, maybe as a last resort?"
+        }
+    ],
+    "gudlinux": [
+        {
+            "link": "https://archlinux.org/download/",
+            "name": "Arch Linux",
+            "tag": "Lightweight, but advanced. Read the manual"
+        },
+        {
+            "link": "https://artixlinux.org/",
+            "name": "Artix Linux",
+            "tag": "Arch but if you don't like systemd"
+        },
+        {
+            "link": "https://voidlinux.org/",
+            "name": "Void Linux",
+            "tag": "More lightweight, more advanced, also RTM"
+        },
+        {
+            "link": "https://linuxmint.com/",
+            "name": "Linux Mint",
+            "tag": "Good for beginners"
+        },
+        {
+            "link": "https://system76.com/pop/",
+            "name": "Pop!_OS",
+            "tag": "Good Nvidia support"
+        },
+        {
+            "link": "https://tails.net/",
+            "name": "Tails",
+            "tag": "Privacy Centered"
+        },
+        {
+            "link": "https://www.damnsmalllinux.org/2024-download.html",
+            "name": "Damn Small Linux",
+            "tag": "It is quite damn small"
+        },
+        {
+            "link": "https://archive.org/download/hannah_montana_linux_x86_basic_edition_202201/hannah_montana_linux_x86_basic_edition.iso",
+            "name": "Hannah Montannah Linux",
+            "tag": "CERTIFIED HOOD CLASSIC"
+        },
+        {
+            "link": "https://sourceforge.net/projects/archiveos/files/u/ubuntu-satanic/ubuntu-satanic-666.11-i386.iso/download",
+            "name": "Satanic Ubuntu",
+            "tag": "an os only made for i368?? in this day and age?? evil... (32bit OS)"
+        },
+        {
+            "link": "https://ubuntu.com/download/desktop",
+            "name": "Normal Ubuntu",
+            "tag": "eh"
+        },
+        {
+            "link": "https://www.alpinelinux.org/",
+            "name": "Alpine Linux",
+            "tag": "GNU coreutils? what's that? REAL men use busybox"
+        }
+    ],
+    "misc": [
+        {
+            "link": "mwrtng/index.html",
+            "name": "The Mewity Rating"
+        },
+        {
+            "link": "https://github.com/classy-giraffe/easy-arch",
+            "name": "Easy Arch Installer"
+        },
+        {
+            "link": "https://massgrave.dev/",
+            "name": "Microsoft Windows Activation Scripts"
+        },
+        {
+            "link": "https://massgrave.dev/genuine-installation-media",
+            "name": "Downloads for nearly every single Windows version"
+        },
+        {
+            "link": "https://www.windows93.net/",
+            "name": "Windows 93"
+        }
+    ],
+    "rnggamelist": [
+        {
+            "link": "https://carlosxdjavgames.altervista.org/wp-content/niveles.php",
+            "name": "Super Mario 4 Jugadores",
+            "tag": "Old but gold"
+        },
+        {
+            "link": "https://mindustrygame.github.io/",
+            "name": "Mindustry"
+        },
+        {
+            "link": "https://www.haxball.com/",
+            "name": "Haxball"
+        },
+        {
+            "link": "https://github.com/Diegiwg/PrismLauncher-Cracked",
+            "name": "Minecraft",
+            "tag": "Prism Launcher, Cracked"
+        },
+        {
+            "link": "https://github.com/stuxvii/acid-launcher",
+            "name": "Minecraft",
+            "tag": "Acid Launcher, Cracked"
+        },
+        {
+            "link": "https://sober.vinegarhq.org/#introducing-sober",
+            "name": "Sober (Roblox on Linux)"
+        },
+        {
+            "link": "https://supertuxkart.net/",
+            "name": "SuperTuxKart"
+        },
+        {
+            "link": "https://sonolus.com/en",
+            "name": "Sonolus"
+        }
+    ],
+    "tools": [
+        {
+            "dl": true,
+            "filename": "Zusier AIO Optimizer Script.bat",
+            "link": "https://raw.githubusercontent.com/Zusier/Zusiers-optimization-Batch/refs/heads/master/Zusier%20AIO.bat",
+            "name": "Windows Optimization Script"
+        },
+        {
+            "link": "https://www.ventoy.net/",
+            "name": "Ventoy",
+            "tag": "Quite nice USB Multiboot tool"
+        },
+        {
+            "link": "https://github.com/ungoogled-software/ungoogled-chromium/",
+            "name": "Ungoogled Chromium",
+            "tag": "What if Chrome was actually good?"
+        },
+        {
+            "link": "https://github.com/Vencord/Vesktop",
+            "name": "Vesktop",
+            "tag": "Discord Client"
+        },
+        {
+            "link": "https://gopeed.com/",
+            "name": "Gopeed Download Manager",
+            "tag": "It's fast!"
+        },
+        {
+            "link": "https://mpv.io/",
+            "name": "MPV",
+            "tag": "Media Player"
+        },
+        {
+            "link": "https://code.visualstudio.com/",
+            "name": "Visual Studio Code",
+            "tag": "Coding centered text editor"
+        },
+        {
+            "link": "https://www.sublimetext.com/",
+            "name": "Sublime Text",
+            "tag": "Normal text editor"
+        },
+        {
+            "link": "https://cobalt.tools/",
+            "name": "cobalt.tools",
+            "tag": "goated social media video download tool"
+        },
+        {
+            "link": "https://www.smtube.org/",
+            "name": "smtube",
+            "tag": "Lightweight YouTube client"
+        },
+        {
+            "link": "https://httpd.apache.org/",
+            "name": "Apache HTTP Server",
+            "tag": "For advanced users"
         }
     ]
 }

@@ -53,6 +53,7 @@ function btndisplay(selected) {
     for (const sel of data[selected]) { // do the below code for EVERY single element in the array stuff
       const item = document.createElement("li"); //create the element for us to put button in
       item.appendChild(document.createElement("span")).textContent = sel.name + ' '; //create the button for us to put in element
+
       if (typeof sel.tag !== 'undefined') {
         item.appendChild(document.createElement("strong")).textContent = sel.tag; // check if there's like a tag and such and if there is then create it
       }
@@ -61,6 +62,10 @@ function btndisplay(selected) {
       }
       else {
         item.setAttribute("onclick", `alert('heads up! redirecting you to ${(sel.link)}.'); location.href=\'${(sel.link)}\'`); // make it so when you click it it warns you and then it sends you to the target website
+      }
+      if (typeof sel.link == 'undefined') {
+        item.setAttribute("onclick", `alert('ermm.. umm.. for some reason theres not a link for this specific option... falling back on SOULJA BOY CRANK THAT..'); location.href=\'${(sel.link)}\'`);
+        console.log("soul")
       }
       results.appendChild(item); // add the thing!!!!!!!!!!!!!!!1 yippe we're done
     }})}}
@@ -91,3 +96,7 @@ if ("maxTouchPoints" in navigator) {
 if (hasTouchScreen) {
     alert('PLEASE!!! I BEG YOU!!! DO NOT VISIT THIS WEBSITE ON MOBILE, it will look horrid, so come back when you have access to a computor,, \n\n\n or just rotate your device sideways and MAYBE it will look nice :)');
 }
+
+fetch('/items.json').then(function(response) { //Dynamically refresh JSON file, as it is cached by the browser and when adding new entries it ISNT GOOD!!!!
+  return response.json();
+});

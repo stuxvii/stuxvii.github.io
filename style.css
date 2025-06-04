@@ -22,7 +22,7 @@ ANY OTHER QUESTIONS????????????????????????????????????? */
 }
 @keyframes spin {
     0% {rotate: 0deg;}
-    100% {rotate: 1440deg;}
+    100% {rotate: 1430deg;}
 }
 @keyframes splash {
     0% {font-size: 2vh;}
@@ -62,10 +62,13 @@ body {
     text-decoration: wavy underline;
 }
 strong {
+    position: relative;
     font-size: 0.6em;
     background-color: #bfbfbf;
     color: black;
     border-radius: 0.2em;
+    padding: 2px;
+    bottom: 0.2vw;
 }
 .splash {
     box-shadow: #222222;
@@ -79,7 +82,7 @@ strong {
     left: 9vw;
     top: -2vh;
     margin: 0;
-    padding: 0;   
+    padding: 0;
 }
 .titlebar {
     font-size: 3em;
@@ -109,7 +112,7 @@ strong {
 }
 
 .container > div {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 1);
 }
 .container > div.menu {
   grid-area: menu;
@@ -127,6 +130,9 @@ a {
 a:hover, a:active {
     color: rgb(18, 112, 219)
 }
+span:hover {
+    cursor:default;
+}
 ul {
     margin-top: 0px; /* this is stupid why do i need to make this say zero */
 }
@@ -134,6 +140,7 @@ li {
     margin-left: -40px;
     padding-top: 0px;
     list-style-type: none;
+    cursor:default;
 }
 li:hover {
     background-color: white;
@@ -143,5 +150,6 @@ li:hover {
 
 .speeeeeen {
     animation-name: spin;
+    animation-fill-mode: forwards;
     animation-duration: 3s;
 }

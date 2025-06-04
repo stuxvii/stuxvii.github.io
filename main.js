@@ -1,8 +1,36 @@
-// hihihihi
+// hihihihi if you plan on using this code for your own website please put this website's url in a credit section or smth..
+// (c) 2025 stuxvii.com
 var section = "";
-function delay(time) {
-  return new Promise(resolve => setTimeout(resolve, time));
+
+function saveFile(url, filename) { // start of code made by https://muhimasri.com/blogs/how-to-save-files-in-javascript/
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename || "file-name";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 }
+
+async function downloadFile(url, filename) {
+  try {
+    const response = await fetch(url, {
+      headers: {
+        Accept:
+          "application/json, text/plain,application/zip, image/png, image/jpeg, image/*",
+      },
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const blob = await response.blob();
+    const blobUrl = URL.createObjectURL(blob);
+    saveFile(blobUrl, filename);
+    URL.revokeObjectURL(blobUrl);
+  } catch (err) {
+    console.error("Error in fetching and downloading file:", err);
+  }
+} // end of third party code
+
 function btndisplay(selected) {
   if (section != selected) { // doing this so the section being loaded isnt needed to be reloaded all the time!!
     section = selected;
@@ -14,11 +42,18 @@ function btndisplay(selected) {
     fetch(jsonfile) 
     .then((response) => response.json())
     .then((data) => {//tbh no clue what this is, copied it from mdn i HOPE i dont need to know
-    for (const sel of data[selected]) { // im sorry. im literally so sorry. listen, EVERY line of code you read here is made by me (or stolen from w3schools/mdn), but see those square brackets?... yeah... i had to use ai to figure them out (IT WAS A LAST RESORT I SWEAR) DHGFJSHGKFSDHGLFKDSHJLGFDSJGLKFDJGLKDJGKLFDJG:LKFDJ:GLKJFD:LGKJFDL:KJ PLEASE FORGIVE ME ILL NEVER DO THIS AGAIN
+    for (const sel of data[selected]) { // do the below code for EVERY single element in the array stuff
       const item = document.createElement("li"); //create the element for us to put button in
       item.appendChild(document.createElement("span")).textContent = sel.name + ' '; //create the button for us to put in element
-      item.appendChild(document.createElement("strong")).textContent = sel.tag;
-      item.setAttribute("onclick", `alert("heads up! redirecting you to ${(sel.link)}"); location.href=\'${(sel.link)}\'`); // make it so when you click it it warns you
+      if (typeof sel.tag !== 'undefined') {
+        console.log(sel.tag);
+        item.appendChild(document.createElement("strong")).textContent = sel.tag; // check if there's like a tag and such and if there is then create it
+      }
+      if (sel.dl == true) {
+        item.setAttribute("onclick", `alert('heads up! automatically downloading a file'); downloadFile('${(sel.link)}', '${(sel.name)}')`);
+      }
+      else {
+        item.setAttribute("onclick", `alert('heads up! redirecting you to ${(sel.link)}.'); location.href=\'${(sel.link)}\'`); // make it so when you click it it warns you and then it sends you to the target website
+      }
       results.appendChild(item); // add the thing!!!!!!!!!!!!!!!1 yippe we're done
-      delay(1000);
     }})}}

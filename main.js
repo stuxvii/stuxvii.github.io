@@ -1,6 +1,12 @@
 // hihihihi if you plan on using this code for your own website please put this website's url in a credit section or smth..
 // (c) 2025 stuxvii.com
 var section = "";
+var animate = false;
+
+document.getElementById("animated").style.animationName = 'null'; //we dont want the user to get motion sickness first thing they enter the website
+document.getElementById("animated1").style.animationName = 'null';
+document.getElementById("animated2").style.animationName = 'null';
+document.body.style.animationPlayState = 'paused'
 
 function saveFile(url, filename) { // start of code made by https://muhimasri.com/blogs/how-to-save-files-in-javascript/
   const a = document.createElement("a");
@@ -31,6 +37,8 @@ async function downloadFile(url, filename) {
   }
 } // end of third party code
 
+
+
 function btndisplay(selected) {
   if (section != selected) { // doing this so the section being loaded isnt needed to be reloaded all the time!!
     section = selected;
@@ -46,14 +54,30 @@ function btndisplay(selected) {
       const item = document.createElement("li"); //create the element for us to put button in
       item.appendChild(document.createElement("span")).textContent = sel.name + ' '; //create the button for us to put in element
       if (typeof sel.tag !== 'undefined') {
-        console.log(sel.tag);
         item.appendChild(document.createElement("strong")).textContent = sel.tag; // check if there's like a tag and such and if there is then create it
       }
-      if (sel.dl == true) {
-        item.setAttribute("onclick", `alert('heads up! automatically downloading a file'); downloadFile('${(sel.link)}', '${(sel.name)}')`);
+      if (typeof sel.dl !== 'undefined') {
+        item.setAttribute("onclick", `alert('heads up! a file from \\n${(sel.link)}\\nwill be shortly downloaded. \\n${(sel.message)}'); downloadFile('${(sel.link)}', '${(sel.filename)}')`);
       }
       else {
         item.setAttribute("onclick", `alert('heads up! redirecting you to ${(sel.link)}.'); location.href=\'${(sel.link)}\'`); // make it so when you click it it warns you and then it sends you to the target website
       }
       results.appendChild(item); // add the thing!!!!!!!!!!!!!!!1 yippe we're done
     }})}}
+
+function animationtoggle() {
+  if (animate) {
+    document.getElementById("animated").style.animationName = 'null'; //we dont want the user to get motion sickness first thing they enter the website
+    document.getElementById("animated1").style.animationName = 'null';
+    document.getElementById("animated2").style.animationName = 'null';
+    document.body.style.animationPlayState = 'paused' 
+    animate = false;
+  }
+  else {
+    document.getElementById("animated").style.animationName = 'titleintro'; //we dont want the user to get motion sickness first thing they enter the website
+    document.getElementById("animated1").style.animationName = 'pagecontent';
+    document.getElementById("animated2").style.animationName = 'pagecontent';
+    document.body.style.animationPlayState = 'running'
+    animate = true;
+  }
+}

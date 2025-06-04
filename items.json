@@ -3,7 +3,8 @@
         {
             "name": "Windows Optimization Script",
             "link": "https://raw.githubusercontent.com/Zusier/Zusiers-optimization-Batch/refs/heads/master/Zusier%20AIO.bat",
-            "dl": true
+            "dl": true,
+            "filename": "Zusier AIO Optimizer Script.bat"
         },
         {
             "name": "Ventoy",
@@ -215,6 +216,18 @@
             "name": "Oneko",
             "tag": "ohoho you're so portuguese",
             "link": "https://github.com/glreno/oneko"
+        }
+    ],
+    "acdbxoptigames": [
+        {
+            "name": "Balatro",
+            "tag": "PC Version",
+            "link": "https://gofile.io/d/aTAnHR"
+        },
+        {
+            "name": "Balatro",
+            "tag": "Mobile Version",
+            "link": "about:blank"
         }
     ]
 }

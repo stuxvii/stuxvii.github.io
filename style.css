@@ -20,15 +20,7 @@ ANY OTHER QUESTIONS????????????????????????????????????? */
     0% {rotate: -2deg;}
     100% {rotate: 2deg;}
 }
-@keyframes spin {
-    0% {rotate: 0deg;}
-    100% {rotate: 1430deg;}
-}
-@keyframes splash {
-    0% {font-size: 2vh;}
-    50% {font-size: 5vh;}
-    100% {font-size: 2vh;}
-}
+
 body {
     overflow: scroll;
     font-family: "VT323", monospace;
@@ -146,10 +138,4 @@ li:hover {
     background-color: white;
     color: black;
     border-color: white;
-}
-
-.speeeeeen {
-    animation-name: spin;
-    animation-fill-mode: forwards;
-    animation-duration: 3s;
 }

@@ -1,4 +1,38 @@
 {
+    "options": [
+        {
+            "name": "list of neat tools and apps",
+            "section": "tools"
+        },
+        {
+            "name": "games optimized by yours truly",
+            "section": "acdbxoptigames"
+        },
+        {
+            "name": "trusted game download sites",
+            "section": "games"
+        },
+        {
+            "name": "unassorted list of games",
+            "section": "rnggamelist"
+        },
+        {
+            "name": "list of emulators",
+            "section": "emu"
+        },
+        {
+            "name": "list of nice linux distros",
+            "section": "gudlinux"
+        },
+        {
+            "name": "iOS jailbreak stuff",
+            "section": "iosjailbreak"
+        },
+        {
+            "name": "credits",
+            "section": "cred"
+        }
+    ],
     "tools": [
         {
             "dl": true,
@@ -452,6 +486,10 @@
             "link": "https://github.com/glreno/oneko",
             "name": "Oneko",
             "tag": "ohoho you're so portuguese"
+        },
+        {
+            "name": "Discord user 'mewity'",
+            "tag": "Ideas, suggestions, feedback and emotional support"
         },
         {
             "title": "Credits section"

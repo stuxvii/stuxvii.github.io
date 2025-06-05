@@ -20,9 +20,12 @@ ANY OTHER QUESTIONS????????????????????????????????????? */
     0% {rotate: -2deg;}
     100% {rotate: 2deg;}
 }
-
+html {
+    max-width:100%;
+    overflow-x: hidden;
+}
 body {
-    overflow: scroll;
+    overflow-x: hidden;
     font-family: "VT323", monospace;
     font-weight: 400;
     font-style: normal;
@@ -47,7 +50,7 @@ img {
     width: 32px;
 }
 .titol {
-    font-size: 8vh;
+    font-size: 8vw;
     position: relative;
     text-align: center;
     animation-name: titleintro;
@@ -94,6 +97,7 @@ strong {
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
 }
+
 .container {
     margin: 10px;
     margin-top: -30px;
@@ -101,12 +105,12 @@ strong {
     display: grid;
     grid-template-areas: 
     "menu content";
-    height: 500px;
-    grid-template-columns: 4fr 5fr;
+    grid-template-columns: 4fr 6fr;
     position: relative;
     background-color: white;
     padding: 8px;
     gap: 10px;
+    
 }
 
 .container > div {
@@ -114,11 +118,44 @@ strong {
 }
 .container > div.menu {
   grid-area: menu;
+  overflow-x: auto;
 }
 .container > div.content {
   grid-area: content;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+@media only screen and (max-width: 634px) {
+
+.container {
+    grid-template-areas: "header header"
+    "footer footer";
+    height: 650px;
+    margin-top: -70px;
+    transform: translate(0%, 0%);
+    position: absolute;
+}
+.container > div.menu {
+  grid-area: header;
   overflow: auto;
 }
+.container > div.content {
+  grid-area: footer;
+  overflow: auto;
+}
+.titlebar {
+    font-size: 1.5em;
+}
+.titol {
+    font-size: 10vh;
+}
+body {
+    overflow-x: clip;
+     max-width:100%;
+}
+}
+
 a {
     color: #fff;
     transition-property: color;

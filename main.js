@@ -1,7 +1,8 @@
 // hihihihi if you plan on using this code for your own website please put this website's url in a credit section or smth..
 // (c) 2025 stuxvii.com
 var section = "";
-var animate = false;
+var animate = false; // enable animations by default
+const jsonfile = new Request("items.json"); // select json file
 
 document.getElementById("animated").style.animationName = 'null'; //we dont want the user to get motion sickness first thing they enter the website
 document.getElementById("animated1").style.animationName = 'null';
@@ -50,7 +51,6 @@ function btndisplay(selected) {
   if (section != selected) { // doing this so the section being loaded isnt needed to be reloaded all the time!!
     section = selected;
     document.getElementById('contentlist').innerHTML = ""; //clear the whole thing because umm.... i need to put stuff inside yk
-    const jsonfile = new Request("items.json"); //retrieve the list of contents
     const results = document.getElementById("contentlist"); // establish where we're sending the data
     let sel = selected; //alias for easier calling
     fetch(jsonfile) 
@@ -116,16 +116,22 @@ function animationtoggle() {
   }
 }
 
-var hasTouchScreen = false;
-
-if ("maxTouchPoints" in navigator) {
-    hasTouchScreen = navigator.maxTouchPoints > 0;
-} 
-
-if (hasTouchScreen) {
-    alert('PLEASE!!! I BEG YOU!!! DO NOT VISIT THIS WEBSITE ON MOBILE, it will look horrid, so come back when you have access to a computor,, \n\n\n or just rotate your device sideways and MAYBE it will look nice :)');
-}
-
 fetch('/items.json').then(function(response) { //Dynamically refresh JSON file, as it is cached by the browser and when adding new entries it ISNT GOOD!!!!
   return response.json();
 });
+
+if (window.screen.width <= 634) {
+  document.getElementById("greetmsg").innerHTML = "Welcome to stuxvii.com! here you can find ummm cool stuff just click one of the options above";
+}
+const results = document.getElementById("listingg"); // establish where we're sending the data
+fetch(jsonfile) 
+.then((response) => response.json())
+.then((data) => {//tbh no clue what this is, copied it from mdn i HOPE i dont need to know
+for (const sel of data.options) {
+  const item = document.createElement("li");
+  item.appendChild(document.createElement("span")).textContent = sel.name;
+  item.setAttribute("onclick", `btndisplay('${(sel.section)}')`);
+  results.appendChild(item);
+  console.log(sel.name);
+  console.log(sel.section);
+}})

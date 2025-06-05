@@ -1,13 +1,8 @@
 // hihihihi if you plan on using this code for your own website please put this website's url in a credit section or smth..
 // (c) 2025 stuxvii.com
 var section = "";
-var animate = false; // enable animations by default
+var animate = true; // enable animations by default
 const jsonfile = new Request("items.json"); // select json file
-
-document.getElementById("animated").style.animationName = 'null'; //we dont want the user to get motion sickness first thing they enter the website
-document.getElementById("animated1").style.animationName = 'null';
-document.getElementById("animated2").style.animationName = 'null';
-document.body.style.animationPlayState = 'paused'
 
 function saveFile(url, filename) { // start of code made by https://muhimasri.com/blogs/how-to-save-files-in-javascript/
   const a = document.createElement("a");
@@ -47,6 +42,7 @@ function pickRandomProperty(obj) {
     return result;
 }
 
+
 function btndisplay(selected) {
   if (section != selected) { // doing this so the section being loaded isnt needed to be reloaded all the time!!
     section = selected;
@@ -76,12 +72,12 @@ function btndisplay(selected) {
         item.appendChild(document.createElement("span")).textContent = sel.name + ' '; //create the button for us to put in element
         }
         if (typeof sel.tag !== 'undefined') {
-          console.log(sel.tag);
-          console.log(sel.kmoji);
           if (typeof sel.kmoji !== 'undefined') 
             {
               let rngkaomoji = pickRandomProperty(sel.kaomojis);
-              item.appendChild(document.createElement("strong")).textContent = sel.kaomojis[rngkaomoji].kaomoji
+              console.log(sel.tag);
+              console.log(sel.kmoji);
+              item.appendChild(document.createElement("strong")).textContent = sel.kaomojis[rngkaomoji]
             } 
           else if (typeof sel.kmoji == 'undefined')
             {
@@ -101,16 +97,16 @@ function btndisplay(selected) {
 
 function animationtoggle() {
   if (animate) {
-    document.getElementById("animated").style.animationName = 'null'; //we dont want the user to get motion sickness first thing they enter the website
-    document.getElementById("animated1").style.animationName = 'null';
-    document.getElementById("animated2").style.animationName = 'null';
+    document.getElementById("title").style.animationName = 'null'; //we dont want the user to get motion sickness first thing they enter the website
+    document.getElementById("subtitle").style.animationName = 'null';
+    document.getElementById("titlebar").style.animationName = 'null';
     document.body.style.animationPlayState = 'paused' 
     animate = false;
   }
   else {
-    document.getElementById("animated").style.animationName = 'titleintro'; //we dont want the user to get motion sickness first thing they enter the website
-    document.getElementById("animated1").style.animationName = 'pagecontent';
-    document.getElementById("animated2").style.animationName = 'pagecontent';
+    document.getElementById("title").style.animationName = 'titleintro'; //we dont want the user to get motion sickness first thing they enter the website
+    document.getElementById("subtitle").style.animationName = 'pagecontent';
+    document.getElementById("titlebar").style.animationName = 'pagecontent';
     document.body.style.animationPlayState = 'running'
     animate = true;
   }
@@ -134,4 +130,12 @@ for (const sel of data.options) {
   results.appendChild(item);
   console.log(sel.name);
   console.log(sel.section);
+}})
+
+fetch(jsonfile) 
+.then((response) => response.json())
+.then((data) => {//tbh no clue what this is, copied it from mdn i HOPE i dont need to know
+for (const sel of data.quotes) {
+  let rngsubtitle = pickRandomProperty(sel.nmpinla);
+  document.getElementById('subtitle').innerHTML = sel.nmpinla[rngsubtitle];
 }})

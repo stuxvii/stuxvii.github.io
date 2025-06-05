@@ -109,8 +109,6 @@
             "title": "optimized games"
         }
     ],
-
-
     "games": [
         {
             "link": "https://www.steamrip.com/",
@@ -373,38 +371,7 @@
             "name": "Uwuntu",
             "kmoji": "true",
             "tag": "dawg",
-            "kaomojis": [
-                {
-                    "kaomoji": "(˶˃ ᵕ ˂˶)"
-                },
-                {
-                    "kaomoji": "( ´∀｀)"
-                },
-                {
-                    "kaomoji": "(=^x^=)"
-                },
-                {
-                    "kaomoji": "(*･ω･)ﾉ"
-                },
-                {
-                    "kaomoji": "(´・ω・｀)"
-                },
-                {
-                    "kaomoji": "((((；ﾟДﾟ)))))))"
-                },
-                {
-                    "kaomoji": "＼＼\\٩( 'ω' )و //／／"
-                },
-                {
-                    "kaomoji": "((o(^∇^)o))"
-                },
-                {
-                    "kaomoji": "(#^.^#)"
-                },
-                {
-                    "kaomoji": "( ＾∀＾)"
-                }
-            ]
+            "kaomojis": ["(˶˃ ᵕ ˂˶)","( ´∀｀)","(=^x^=)","(*･ω･)ﾉ","(´・ω・｀)","((((；ﾟДﾟ)))))))","＼＼\\٩( 'ω' )و //／／","((o(^∇^)o))","(#^.^#)","( ＾∀＾)"]
         },      
         {
             "link": "https://ubuntu.com/download/desktop",
@@ -493,6 +460,11 @@
         },
         {
             "title": "Credits section"
+        }
+    ],
+    "quotes": [
+        {
+            "nmpinla": ["get real", "optiredlinestealer", "arch btw", "i heart vscode", "do you know da wae?"]
         }
     ]
 }

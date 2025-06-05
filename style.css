@@ -72,13 +72,15 @@ strong {
     bottom: 0.2vw;
 }
 .splash {
-    box-shadow: #222222;
-    text-shadow: #ff0000 -1px -1px;
-    font-size: 3vh;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    font-size: 4vw;
     position: relative;
     text-align: center;
     animation-duration: 3s;
+    animation-name: pagecontent;
     animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
     z-index: 300;
     left: 9vw;
     top: -2vh;
@@ -149,6 +151,10 @@ strong {
 }
 .titol {
     font-size: 10vh;
+}
+.splash {
+    font-size: 8vh;
+    bottom: 10vh;
 }
 body {
     overflow-x: clip;

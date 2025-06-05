@@ -49,7 +49,6 @@ function pickRandomProperty(obj) {
 function btndisplay(selected) {
   if (section != selected) { // doing this so the section being loaded isnt needed to be reloaded all the time!!
     section = selected;
-    document.getElementById('sectionname').innerHTML = selected; // display the name of like the section
     document.getElementById('contentlist').innerHTML = ""; //clear the whole thing because umm.... i need to put stuff inside yk
     const jsonfile = new Request("items.json"); //retrieve the list of contents
     const results = document.getElementById("contentlist"); // establish where we're sending the data
@@ -59,36 +58,44 @@ function btndisplay(selected) {
     .then((data) => {//tbh no clue what this is, copied it from mdn i HOPE i dont need to know
     for (const sel of data[selected]) { // do the below code for EVERY single element in the array stuff
       const item = document.createElement("li"); //create the element for us to put button in
-      if (typeof sel.icon !== 'undefined') {
-        item.appendChild(document.createElement("img")).src = sel.icon;
-        item.appendChild(document.createElement("span")).textContent = ' ' + sel.name + ' '; // make some margin for image
-      } else {
-        item.appendChild(document.createElement("span")).textContent = sel.name + ' '; //create the button for us to put in element
-      }
       
-      if (typeof sel.tag !== 'undefined') {
-        console.log(sel.tag);
-        console.log(sel.kmoji);
-        if (typeof sel.kmoji !== 'undefined') 
-        {
-          let rngkaomoji = pickRandomProperty(sel.kaomojis);
-          item.appendChild(document.createElement("strong")).textContent = sel.kaomojis[rngkaomoji].kaomoji
-        } 
-        else if (typeof sel.kmoji == 'undefined')
-        {
-          item.appendChild(document.createElement("strong")).textContent = sel.tag; // check if there's like a tag and such and if there is then create it
+      document.getElementById('sectionname').innerHTML = sel.title;
+
+      if (typeof sel.name !== 'undefined') {
+        if (typeof sel.dl !== 'undefined') {
+          item.setAttribute("onclick", `alert('heads up! a file from \\n${(sel.link)}\\nwill be shortly downloaded. \\n${(sel.message)}'); downloadFile('${(sel.link)}', '${(sel.filename)}')`);
+          results.appendChild(item);
+        } else {
+          item.setAttribute("onclick", `alert('heads up! redirecting you to ${(sel.link)}.'); location.href=\'${(sel.link)}\'`); // make it so when you click it it warns you and then it sends you to the target website
+          results.appendChild(item);
         }
+        if (typeof sel.icon !== 'undefined') {
+          item.appendChild(document.createElement("img")).src = sel.icon;
+          item.appendChild(document.createElement("span")).textContent = ' ' + sel.name + ' '; // make some margin for image
+        } else {
+        item.appendChild(document.createElement("span")).textContent = sel.name + ' '; //create the button for us to put in element
+        }
+        if (typeof sel.tag !== 'undefined') {
+          console.log(sel.tag);
+          console.log(sel.kmoji);
+          if (typeof sel.kmoji !== 'undefined') 
+            {
+              let rngkaomoji = pickRandomProperty(sel.kaomojis);
+              item.appendChild(document.createElement("strong")).textContent = sel.kaomojis[rngkaomoji].kaomoji
+            } 
+          else if (typeof sel.kmoji == 'undefined')
+            {
+              item.appendChild(document.createElement("strong")).textContent = sel.tag; // check if there's like a tag and such and if there is then create it
+            }
       }
-      if (typeof sel.dl !== 'undefined') {
-        item.setAttribute("onclick", `alert('heads up! a file from \\n${(sel.link)}\\nwill be shortly downloaded. \\n${(sel.message)}'); downloadFile('${(sel.link)}', '${(sel.filename)}')`);
       }
-      else {
-        item.setAttribute("onclick", `alert('heads up! redirecting you to ${(sel.link)}.'); location.href=\'${(sel.link)}\'`); // make it so when you click it it warns you and then it sends you to the target website
-      }
+
+
       if (typeof sel.link == 'undefined') {
         item.setAttribute("onclick", `alert('ermm.. umm.. for some reason theres not a link for this specific option... falling back on SOULJA BOY CRANK THAT..'); location.href=\'${(sel.link)}\'`);
+        results.appendChild(item);
       }
-      results.appendChild(item); // add the thing!!!!!!!!!!!!!!!1 yippe we're done
+       // add the thing!!!!!!!!!!!!!!!1 yippe we're done
 
     }})}}
 

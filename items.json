@@ -55,6 +55,9 @@
             "link": "https://httpd.apache.org/",
             "name": "Apache HTTP Server",
             "tag": "For advanced users"
+        },
+        {
+            "title": "tools & applications"
         }
     ],
     "acdbxoptigames": [
@@ -67,6 +70,9 @@
             "link": "https://gofile.io/d/n72s83",
             "name": "Balatro",
             "tag": "Mobile Version"
+        },
+        {
+            "title": "optimized games"
         }
     ],
 
@@ -98,46 +104,66 @@
             "link": "https://archive.org/",
             "name": "Internet Archive",
             "tag": "Not really recommended, maybe as a last resort?"
+        },
+        {
+            "title": "do what u want cause a pirate is free, u are a pirate!"
         }
     ],
     "rnggamelist": [
         {
             "link": "https://carlosxdjavgames.altervista.org/wp-content/niveles.php",
             "name": "Super Mario 4 Jugadores",
-            "tag": "Old but gold"
+            "tag": "Windows & Android"
         },
         {
             "link": "https://mindustrygame.github.io/",
-            "name": "Mindustry"
+            "name": "Mindustry",
+            "tag": "Windows, Mac, Linux & Android"
         },
         {
             "link": "https://www.haxball.com/",
-            "name": "Haxball"
+            "name": "Haxball",
+            "tag": "Browser, PC"
         },
         {
             "link": "https://github.com/Diegiwg/PrismLauncher-Cracked",
             "name": "Minecraft",
-            "tag": "Prism Launcher, Cracked"
+            "tag": "Java, Prism Launcher, Cracked"
         },
         {
             "link": "https://github.com/stuxvii/acid-launcher",
             "name": "Minecraft",
-            "tag": "Acid Launcher, Cracked"
+            "tag": "Java, Acid Launcher, Cracked"
         },
         {
             "link": "https://sober.vinegarhq.org/#introducing-sober",
-            "name": "Sober (Roblox on Linux)"
+            "name": "Sober",
+            "tag": "Roblox on Linux"
         },
         {
             "link": "https://supertuxkart.net/",
-            "name": "SuperTuxKart"
+            "name": "SuperTuxKart",
+            "tag": "Windows, Mac, Linux & Android"
         },
         {
             "link": "https://sonolus.com/en",
-            "name": "Sonolus"
+            "name": "Sonolus",
+            "tag": "Next-Generation Rhythm Game; Android & iOS"
+        },
+        {
+            "title": "Legally-ish free games"
         }
     ],
     "emu": [
+        {
+            "link":"https://emulation.gametechwiki.com/index.php/Emulator_files",
+            "name":"BIOS Files and Keys"
+        },
+        {
+            "link": "https://www.mesen.ca/",
+            "name": "Mesen",
+            "tag": "Nintendo Entertainment System"
+        },
         {
             "link": "https://www.snes9x.com/",
             "name": "snes9x",
@@ -149,9 +175,49 @@
             "tag": "Nintendo 64"
         },
         {
+            "link": "https://dolphin-emu.org/download/",
+            "name": "Dolphin Emulator",
+            "tag": "Nintendo Gamecube & Nintendo Wii"
+        },
+        {
+            "link": "https://melonds.kuribo64.net/downloads.php",
+            "name": "MelonDS",
+            "tag": "Nintendo DS"
+        },
+        {
+            "link": "https://azahar-emu.org/pages/download/",
+            "name": "Azahar Emulator",
+            "tag": "Nintendo 3DS"
+        },
+        {
+            "link": "https://github.com/cemu-project/Cemu/releases",
+            "name": "Cemu",
+            "tag": "Nintendo Wii U"
+        },
+        {
+            "link": "https://ryujinx.app/",
+            "name": "Ryujinx",
+            "tag": "Nintendo Switch"
+        },
+        {
+            "link": "https://www.duckstation.org/",
+            "name": "DuckStation",
+            "tag": "PlayStation 1"
+        },
+        {
             "link": "https://pcsx2.net/",
             "name": "PCSX2",
             "tag": "PlayStation 2"
+        },
+        {
+            "link": "https://rpcs3.net/quickstart",
+            "name": "RPCS3",
+            "tag": "PlayStation 3"
+        },
+        {
+            "link": "https://shadps4.net/",
+            "name": "ShadPS4",
+            "tag": "PlayStation 4"
         },
         {
             "link": "https://www.ppsspp.org/",
@@ -159,9 +225,27 @@
             "tag": "PlayStation Portable"
         },
         {
-            "link": "https://redream.io/",
-            "name": "redream",
+            "link": "https://vita3k.org/quickstart.html",
+            "name": "Vita3K",
+            "tag": "PlayStation Vita"
+        },
+        {
+            "link": "https://ares-emu.net/download",
+            "name": "Ares",
+            "tag": "SEGA Genesis, SEGA Master System, SEGA SG-1000"
+        },
+        {
+            "link": "https://mednafen.github.io/releases/",
+            "name": "MEDNAFEN",
+            "tag": "SEGA Saturn"
+        },
+        {
+            "link": "https://flyinghead.github.io/flycast-builds/",
+            "name": "Flycast",
             "tag": "Dreamcast"
+        },
+        {
+            "title": "Emulators"
         }
     ],    
     "misc": [
@@ -179,11 +263,19 @@
         },
         {
             "link": "https://massgrave.dev/genuine-installation-media",
-            "name": "Downloads for nearly every single Windows version"
+            "name": "Downloads for versions of Windows XP-10"
+        },
+        {
+            "link": "https://winworldpc.com/library/operating-systems",
+            "name": "Downloads for versions of Windows 1.0-ME"
         },
         {
             "link": "https://www.windows93.net/",
+            "tag": "Toy",
             "name": "Windows 93"
+        },
+        {
+            "title": "Miscellaneous"
         }
     ],
     "gudlinux": [      
@@ -287,10 +379,48 @@
             "tag": "eh"
         },        
         {
-            "link": "https://archive.org/download/hannah_montana_linux_x86_basic_edition_202201/hannah_montana_linux_x86_basic_edition.iso",
+            "link": "https://archive.org/details/hannah_montana_linux_x86_basic_edition_202201",
             "icon": "https://fiu-original.b-cdn.net/fontsinuse.com/use-images/N210/210188/210188.png?filename=1200px-Disney_Hannah_Montana_Logo.svg.png",
             "name": "Hannah Montannah Linux",
             "tag": "CERTIFIED HOOD CLASSIC"
+        },
+        {
+            "title": "Kewl Linux Distros"
+        }
+    ],
+    "iosjailbreak": [
+        {
+            "name": "AppSnapp",
+            "tag": "iOS 1.1.1",
+            "link": "https://web.archive.org/web/20071213000918/http://www.jailbreakme.com/"
+        },
+        {
+            "name": "JailbreakMe 2.0",
+            "link": "https://www.jailbreakme.com/star",
+            "tag": "iOS 3.1.2 - 4.0.1 (except 3.2.2)"
+        },
+        {
+            "name": "JailbreakMe 3.0",
+            "link": "https://www.jailbreakme.com/",
+            "tag": "iOS 4.2.6 - 4.3.3"
+        },
+        {
+            "name": "JailbreakMe 4.0",
+            "link": "https://lukezgd.github.io/jbme4/",
+            "tag": "iOS 9.1 - 9.3.4"
+        },
+        {
+            "name": "totally.not.spyware.lol",
+            "link": "https://totally.not.spyware.lol",
+            "tag": "iOS 10"
+        },
+        {
+            "name": "MeridianFix",
+            "link": "https://lukezgd.github.io/MeridianFix/",
+            "tag": "iOS 10; iPhone 7 onwards"
+        },
+        {
+            "title": "iOS Jailbreaking sites"
         }
     ],
     "cred": [
@@ -322,6 +452,9 @@
             "link": "https://github.com/glreno/oneko",
             "name": "Oneko",
             "tag": "ohoho you're so portuguese"
+        },
+        {
+            "title": "Credits section"
         }
     ]
 }

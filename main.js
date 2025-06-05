@@ -37,7 +37,14 @@ async function downloadFile(url, filename) {
   }
 } // end of third party code
 
-
+function pickRandomProperty(obj) {
+    var result;
+    var count = 0;
+    for (var prop in obj)
+        if (Math.random() < 1/++count)
+           result = prop;
+    return result;
+}
 
 function btndisplay(selected) {
   if (section != selected) { // doing this so the section being loaded isnt needed to be reloaded all the time!!
@@ -52,10 +59,25 @@ function btndisplay(selected) {
     .then((data) => {//tbh no clue what this is, copied it from mdn i HOPE i dont need to know
     for (const sel of data[selected]) { // do the below code for EVERY single element in the array stuff
       const item = document.createElement("li"); //create the element for us to put button in
-      item.appendChild(document.createElement("span")).textContent = sel.name + ' '; //create the button for us to put in element
-
+      if (typeof sel.icon !== 'undefined') {
+        item.appendChild(document.createElement("img")).src = sel.icon;
+        item.appendChild(document.createElement("span")).textContent = ' ' + sel.name + ' '; // make some margin for image
+      } else {
+        item.appendChild(document.createElement("span")).textContent = sel.name + ' '; //create the button for us to put in element
+      }
+      
       if (typeof sel.tag !== 'undefined') {
-        item.appendChild(document.createElement("strong")).textContent = sel.tag; // check if there's like a tag and such and if there is then create it
+        console.log(sel.tag);
+        console.log(sel.kmoji);
+        if (typeof sel.kmoji !== 'undefined') 
+        {
+          let rngkaomoji = pickRandomProperty(sel.kaomojis);
+          item.appendChild(document.createElement("strong")).textContent = sel.kaomojis[rngkaomoji].kaomoji
+        } 
+        else if (typeof sel.kmoji == 'undefined')
+        {
+          item.appendChild(document.createElement("strong")).textContent = sel.tag; // check if there's like a tag and such and if there is then create it
+        }
       }
       if (typeof sel.dl !== 'undefined') {
         item.setAttribute("onclick", `alert('heads up! a file from \\n${(sel.link)}\\nwill be shortly downloaded. \\n${(sel.message)}'); downloadFile('${(sel.link)}', '${(sel.filename)}')`);
@@ -65,9 +87,9 @@ function btndisplay(selected) {
       }
       if (typeof sel.link == 'undefined') {
         item.setAttribute("onclick", `alert('ermm.. umm.. for some reason theres not a link for this specific option... falling back on SOULJA BOY CRANK THAT..'); location.href=\'${(sel.link)}\'`);
-        console.log("soul")
       }
       results.appendChild(item); // add the thing!!!!!!!!!!!!!!!1 yippe we're done
+
     }})}}
 
 function animationtoggle() {

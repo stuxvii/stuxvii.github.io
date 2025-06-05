@@ -40,6 +40,12 @@ body {
     font-size: 1.2em;
     text-decoration: underline;
 }
+img {
+    position:relative;
+    left: 6px;
+    top: 4px;
+    width: 32px;
+}
 .titol {
     font-size: 8vh;
     position: relative;

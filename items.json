@@ -1,5 +1,14 @@
 {
+    "greetmsg": [
+        {
+            "name":"Welcome to stuxvii.com! here you can find ummm cool stuff just click an option :p"
+        }
+    ],
     "options": [
+        {
+            "name": "welcome",
+            "section": "greetmsg"
+        },
         {
             "name": "list of neat tools and apps",
             "section": "tools"
@@ -464,7 +473,7 @@
     ],
     "quotes": [
         {
-            "nmpinla": ["get real", "optiredlinestealer", "arch btw", "i heart vscode", "do you know da wae?"]
+            "nmpinla": ["get real", "optijuegos X optiredlinestealer ✓", "arch btw", "i heart vscode", "do you know da wae?"]
         }
     ]
 }

@@ -1,8 +1,96 @@
-// hihihihi if you plan on using this code for your own website please put this website's url in a credit section or smth..
-// (c) 2025 stuxvii.com
-var section = "";
-var animate = true; // enable animations by default
-const jsonfile = new Request("items.json"); // select json file
+const jsonfile = new Request("items.json");
+var animate = true;
+var section = "greetmsg";
+
+fetch(jsonfile) // manage the quirky little splash text
+.then((response) => response.json())
+.then((data) => {
+for (const sel of data.quotes) {
+  let rngsubtitle = pickRandomProperty(sel.nmpinla); // LET ME TELL YOU, I'M OUT HERE FROM A VERY FAR AWAY PLACE ALL FOR A CHANCE TO BE A STAR NOWHERE SEEMS TO BE TOO FAR 🗣️🗣️🗣️🔥🔥🔥🔥
+  document.getElementById('subtitle').innerHTML = sel.nmpinla[rngsubtitle];
+}})
+ if (Math.floor(Math.random() * 10) == 9) {
+    location.href = "https://www.youtube.com/watch?v=PDecYCBn5Kw";
+ }
+// add all the sectionss
+results = document.getElementById("listingg"); // set our target
+fetch(jsonfile) 
+.then((response) => response.json())
+.then((data) => {
+for (const sel of data.options) { // go through every section namee
+  const item = document.createElement("li");
+  item.appendChild(document.createElement("span")).textContent = sel.name;
+  item.setAttribute("onclick", `btndisplay('${(sel.section)}')`);
+  item.setAttribute("id", `${(sel.section)}`);
+  results.appendChild(item);
+}})
+
+greet = document.getElementById("contentlist"); // set our target
+fetch(jsonfile) 
+.then((response) => response.json())
+.then((data) => {
+for (const sel of data.greetmsg) { // go through every section namee
+  const item = document.createElement("li");
+  item.appendChild(document.createElement("span")).textContent = sel.name;
+  greet.appendChild(item);
+}})
+
+// FUNCTION REALM // aka stolen code realm
+function btndisplay(choice, force) {
+    if (section !== choice || force == 1) { // highlight current thingg
+    document.getElementById(section).setAttribute("class", "none"); // look for any previous activated section and make its theme deactivated
+    section = choice; // set the current activated section
+    document.getElementById(choice).setAttribute("class", "selecteditem"); // activate selected theme
+    const results = document.getElementById("contentlist"); // establish where we're sending the data
+    document.getElementById('contentlist').innerHTML = ""; //clear the whole thing because umm.... i need to put stuff inside yk
+    let sel = choice; //alias for easier calling
+    fetch(jsonfile) 
+    .then((response) => response.json())
+    .then((data) => {//tbh no clue what this is, copied it from mdn i HOPE i dont need to know
+    for (const sel of data[choice]) { // do the below code for EVERY single element in the array stuff
+      const item = document.createElement("li"); //create the element for us to put element in
+        if (sel == 'greetmsg') {
+            console.log(sel);
+            item.appendChild(document.createElement("span")).textContent = sel.name;
+            results.appendChild(item);
+        }
+      if (typeof sel.name !== 'undefined') {
+        if (typeof sel.link) {
+          if (typeof sel.dl !== 'undefined') {
+            item.setAttribute("onclick", `alert('heads up! a file from \\n${(sel.link)}\\nwill be shortly downloaded. \\n${(sel.message)}'); downloadFile('${(sel.link)}', '${(sel.filename)}')`);
+            results.appendChild(item);
+          } else {
+            item.setAttribute("onclick", `alert('heads up! redirecting you to ${(sel.link)}.'); location.href=\'${(sel.link)}\'`); // make it so when you click it it warns you and then it sends you to the target website
+            results.appendChild(item);
+          }
+          if (typeof sel.icon !== 'undefined') {
+            item.appendChild(document.createElement("img")).src = sel.icon;
+            item.appendChild(document.createElement("span")).textContent = ' ' + sel.name + ' '; // make some margin for image
+          } else {
+          item.appendChild(document.createElement("span")).textContent = sel.name + ' '; //create the button for us to put in element
+          }
+          if (typeof sel.tag !== 'undefined') {
+            if (typeof sel.kmoji !== 'undefined') 
+              {
+                let rngkaomoji = pickRandomProperty(sel.kaomojis);
+                item.appendChild(document.createElement("strong")).textContent = sel.kaomojis[rngkaomoji];
+              } 
+            else
+              {
+                item.appendChild(document.createElement("strong")).textContent = sel.tag; // check if there's like a tag and such and if there is then create it
+              }
+        }}
+      }}})
+}}
+
+function pickRandomProperty(obj) {
+    var result;
+    var count = 0;
+    for (var prop in obj)
+        if (Math.random() < 1/++count)
+           result = prop;
+    return result;
+}
 
 function saveFile(url, filename) { // start of code made by https://muhimasri.com/blogs/how-to-save-files-in-javascript/
   const a = document.createElement("a");
@@ -33,109 +121,19 @@ async function downloadFile(url, filename) {
   }
 } // end of third party code
 
-function pickRandomProperty(obj) {
-    var result;
-    var count = 0;
-    for (var prop in obj)
-        if (Math.random() < 1/++count)
-           result = prop;
-    return result;
-}
-
-
-function btndisplay(selected) {
-  if (section != selected) { // doing this so the section being loaded isnt needed to be reloaded all the time!!
-    section = selected;
-    document.getElementById('contentlist').innerHTML = ""; //clear the whole thing because umm.... i need to put stuff inside yk
-    const results = document.getElementById("contentlist"); // establish where we're sending the data
-    let sel = selected; //alias for easier calling
-    fetch(jsonfile) 
-    .then((response) => response.json())
-    .then((data) => {//tbh no clue what this is, copied it from mdn i HOPE i dont need to know
-    for (const sel of data[selected]) { // do the below code for EVERY single element in the array stuff
-      const item = document.createElement("li"); //create the element for us to put button in
-      
-      document.getElementById('sectionname').innerHTML = sel.title;
-
-      if (typeof sel.name !== 'undefined') {
-        if (typeof sel.dl !== 'undefined') {
-          item.setAttribute("onclick", `alert('heads up! a file from \\n${(sel.link)}\\nwill be shortly downloaded. \\n${(sel.message)}'); downloadFile('${(sel.link)}', '${(sel.filename)}')`);
-          results.appendChild(item);
-        } else {
-          item.setAttribute("onclick", `alert('heads up! redirecting you to ${(sel.link)}.'); location.href=\'${(sel.link)}\'`); // make it so when you click it it warns you and then it sends you to the target website
-          results.appendChild(item);
-        }
-        if (typeof sel.icon !== 'undefined') {
-          item.appendChild(document.createElement("img")).src = sel.icon;
-          item.appendChild(document.createElement("span")).textContent = ' ' + sel.name + ' '; // make some margin for image
-        } else {
-        item.appendChild(document.createElement("span")).textContent = sel.name + ' '; //create the button for us to put in element
-        }
-        if (typeof sel.tag !== 'undefined') {
-          if (typeof sel.kmoji !== 'undefined') 
-            {
-              let rngkaomoji = pickRandomProperty(sel.kaomojis);
-              console.log(sel.tag);
-              console.log(sel.kmoji);
-              item.appendChild(document.createElement("strong")).textContent = sel.kaomojis[rngkaomoji]
-            } 
-          else if (typeof sel.kmoji == 'undefined')
-            {
-              item.appendChild(document.createElement("strong")).textContent = sel.tag; // check if there's like a tag and such and if there is then create it
-            }
-      }
-      }
-
-
-      if (typeof sel.link == 'undefined') {
-        item.setAttribute("onclick", `alert('ermm.. umm.. for some reason theres not a link for this specific option... falling back on SOULJA BOY CRANK THAT..'); location.href=\'${(sel.link)}\'`);
-        results.appendChild(item);
-      }
-       // add the thing!!!!!!!!!!!!!!!1 yippe we're done
-
-    }})}}
-
 function animationtoggle() {
-  if (animate) {
-    document.getElementById("title").style.animationName = 'null'; //we dont want the user to get motion sickness first thing they enter the website
-    document.getElementById("subtitle").style.animationName = 'null';
-    document.getElementById("titlebar").style.animationName = 'null';
-    document.body.style.animationPlayState = 'paused' 
-    animate = false;
-  }
-  else {
-    document.getElementById("title").style.animationName = 'titleintro'; //we dont want the user to get motion sickness first thing they enter the website
-    document.getElementById("subtitle").style.animationName = 'pagecontent';
-    document.getElementById("titlebar").style.animationName = 'pagecontent';
-    document.body.style.animationPlayState = 'running'
-    animate = true;
+  switch (animate) {
+    case true:
+        document.getElementById("title").style.animationName = 'null'; //we dont want the user to get motion sickness first thing they enter the website
+        document.getElementById("subtitle").style.animationName = 'null';
+        document.body.style.animationPlayState = 'paused' 
+        animate = false;
+    break;
+    case false:
+        document.getElementById("title").style.animationName = 'titleintro'; //we DO want the user to get motion sickness first thing they enter the website
+        document.getElementById("subtitle").style.animationName = 'pagecontent';
+        document.body.style.animationPlayState = 'running'
+        animate = true;
+    break;
   }
 }
-
-fetch('/items.json').then(function(response) { //Dynamically refresh JSON file, as it is cached by the browser and when adding new entries it ISNT GOOD!!!!
-  return response.json();
-});
-
-if (window.screen.width <= 634) {
-  document.getElementById("greetmsg").innerHTML = "Welcome to stuxvii.com! here you can find ummm cool stuff just click one of the options above";
-}
-const results = document.getElementById("listingg"); // establish where we're sending the data
-fetch(jsonfile) 
-.then((response) => response.json())
-.then((data) => {//tbh no clue what this is, copied it from mdn i HOPE i dont need to know
-for (const sel of data.options) {
-  const item = document.createElement("li");
-  item.appendChild(document.createElement("span")).textContent = sel.name;
-  item.setAttribute("onclick", `btndisplay('${(sel.section)}')`);
-  results.appendChild(item);
-  console.log(sel.name);
-  console.log(sel.section);
-}})
-
-fetch(jsonfile) 
-.then((response) => response.json())
-.then((data) => {//tbh no clue what this is, copied it from mdn i HOPE i dont need to know
-for (const sel of data.quotes) {
-  let rngsubtitle = pickRandomProperty(sel.nmpinla);
-  document.getElementById('subtitle').innerHTML = sel.nmpinla[rngsubtitle];
-}})

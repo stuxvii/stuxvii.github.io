@@ -20,12 +20,13 @@ ANY OTHER QUESTIONS????????????????????????????????????? */
     0% {rotate: -2deg;}
     100% {rotate: 2deg;}
 }
+
+html,body { min-height:100%; }
 html {
-    max-width:100%;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 body {
-    overflow-x: hidden;
+    overflow-x: clip;
     font-family: "VT323", monospace;
     font-weight: 400;
     font-style: normal;
@@ -39,18 +40,20 @@ body {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-.unfunnyjoke {
-    font-size: 1.2em;
-    text-decoration: underline;
-}
+
 img {
     position:relative;
     left: 6px;
     top: 4px;
     width: 32px;
 }
+.about {
+    position: absolute;
+    bottom: 0;
+    top: 350px;
+}
 .titol {
-    font-size: 8vw;
+    font-size: 8vh;
     position: relative;
     text-align: center;
     animation-name: titleintro;
@@ -65,33 +68,26 @@ img {
 strong {
     position: relative;
     font-size: 0.6em;
-    background-color: #bfbfbf;
-    color: black;
+    border: 2px solid;
+    background-color: #585858;
+    color: rgb(255, 255, 255);
     border-radius: 0.2em;
     padding: 2px;
     bottom: 0.2vw;
 }
 .splash {
-    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
     font-size: 4vw;
     position: relative;
-    text-align: center;
-    animation-duration: 3s;
-    animation-name: pagecontent;
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    z-index: 300;
-    left: 9vw;
-    top: -2vh;
-    margin: 0;
-    padding: 0;
 }
 .titlebar {
-    font-size: 3em;
-    padding-bottom: 80px;
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+    font-size: 2em;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
     animation-name: pagecontent;
     animation-duration: 3s;
@@ -100,90 +96,107 @@ strong {
     animation-timing-function: ease-in-out;
 }
 
-.container {
-    margin: 10px;
-    margin-top: -30px;
+.menu {
+    display: flex;
+    flex-wrap: nowrap;
+    
     font-size: 2em;
-    display: grid;
-    grid-template-areas: 
-    "menu content";
-    grid-template-columns: 4fr 6fr;
-    position: relative;
-    background-color: white;
-    padding: 8px;
-    gap: 10px;
+    display: flex;
     
 }
 
-.container > div {
-  background-color: rgba(0, 0, 0, 1);
-}
-.container > div.menu {
-  grid-area: menu;
-  overflow-x: auto;
-}
-.container > div.content {
-  grid-area: content;
-  overflow-y: auto;
-  overflow-x: auto;
+.menu > div.menu {
+  background-color: #f1f1f1;
+  width: 10px;
+  margin: 10px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 75px;
 }
 
-@media only screen and (max-width: 634px) {
-
-.container {
-    grid-template-areas: "header header"
-    "footer footer";
-    height: 650px;
-    margin-top: -70px;
-    transform: translate(0%, 0%);
+.a2763 {
+    overflow-y: auto;
+    z-index: -1;
+    min-height: 30vh;
+}
+@media only screen and (min-width: 880px) {
+    .menu {
     position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    justify-content: center;
+    }
+    .a2763 {
+    min-width: 355px;
+    }
+    ul {
+    max-height: 60vh;
+    min-height: 30vh;
+    }
 }
-.container > div.menu {
-  grid-area: header;
-  overflow: auto;
-}
-.container > div.content {
-  grid-area: footer;
-  overflow: auto;
-}
-.titlebar {
-    font-size: 1.5em;
-}
-.titol {
-    font-size: 10vh;
-}
-.splash {
-    font-size: 8vh;
-    bottom: 10vh;
-}
-body {
-    overflow-x: clip;
-     max-width:100%;
-}
+@media only screen and (max-width: 878px) {
+    img {
+        width: 24px;
+    }
+    .menu {
+        flex-direction: column;
+    }
+    .subtitle {
+        font-size: 1.5em;
+    }
+    .splash {
+        font-size: 8vh;
+        bottom: 10vh;
+    }
+    .details {
+        min-height: 20vh;
+    }
+    .menu {
+    margin-top: 30vh;
+    max-width: 100vh;
+    max-height: 60vh;
+    min-width: 90vw;
+    position: fixed;
+    font-size: 3vh;
+    top:  20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    justify-content: center;
+    }
 }
 
-a {
-    color: #fff;
-    transition-property: color;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
-}
-a:hover, a:active {
-    color: rgb(18, 112, 219)
-}
-span:hover {
-    cursor:default;
-}
 ul {
-    margin-top: 0px; /* this is stupid why do i need to make this say zero */
+    margin: 2px;
+    overflow-y: auto;
+    border: 10px solid #585858;
+    z-index: 1;
 }
+
 li {
     margin-left: -40px;
     padding-top: 0px;
     list-style-type: none;
     cursor:default;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 li:hover {
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+li:active {
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 204, 255);
+}
+.selecteditem {
     background-color: white;
     color: black;
     border-color: white;

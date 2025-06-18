@@ -1,7 +1,7 @@
 {
     "greetmsg": [
         {
-            "name":"Welcome to stuxvii.com! here you can find ummm cool stuff just click an option :p"
+            "name": "Welcome to stuxvii.com! here you can find ummm cool stuff just click an option :p"
         }
     ],
     "options": [
@@ -18,7 +18,7 @@
             "section": "acdbxoptigames"
         },
         {
-            "name": "trusted game download sites",
+            "name": "trusted software download sites",
             "section": "games"
         },
         {
@@ -40,6 +40,10 @@
         {
             "name": "credits",
             "section": "cred"
+        },
+        {
+            "name": "toggle animations",
+            "exec": "animationtoggle()"
         }
     ],
     "tools": [
@@ -98,9 +102,6 @@
             "link": "https://httpd.apache.org/",
             "name": "Apache HTTP Server",
             "tag": "For advanced users"
-        },
-        {
-            "title": "tools & applications"
         }
     ],
     "acdbxoptigames": [
@@ -137,6 +138,11 @@
             "tag": "Forum, Login needed"
         },
         {
+            "link": "https://fmhy.net/",
+            "name": "FREE MEDIA HECK YEAH",
+            "tag": "General"
+        },
+        {
             "link": "https://flashpointarchive.org/downloads",
             "name": "Flashpoint Archive",
             "tag": "Flash and other web games"
@@ -144,7 +150,7 @@
         {
             "link": "https://archive.org/",
             "name": "Internet Archive",
-            "tag": "Not really recommended, maybe as a last resort?"
+            "tag": "Older games, and miscellaneous programs"
         },
         {
             "title": "do what u want cause a pirate is free, u are a pirate!"
@@ -197,8 +203,8 @@
     ],
     "emu": [
         {
-            "link":"https://emulation.gametechwiki.com/index.php/Emulator_files",
-            "name":"BIOS Files and Keys"
+            "link": "https://emulation.gametechwiki.com/index.php/Emulator_files",
+            "name": "BIOS Files and Keys"
         },
         {
             "link": "https://www.mesen.ca/",
@@ -209,6 +215,16 @@
             "link": "https://www.snes9x.com/",
             "name": "snes9x",
             "tag": "Super Nintendo Entertainment System"
+        },
+        {
+            "link": "https://sameboy.github.io/",
+            "name": "SameBoy",
+            "tag": "Nintendo Gameboy/Gameboy Color"
+        },
+        {
+            "link": "https://mgba.io/",
+            "name": "mGBA",
+            "tag": "Nintendo Gameboy Advance"
         },
         {
             "link": "https://mupen64plus.org/",
@@ -236,9 +252,24 @@
             "tag": "Nintendo Wii U"
         },
         {
-            "link": "https://ryujinx.app/",
-            "name": "Ryujinx",
-            "tag": "Nintendo Switch"
+            "link": "https://git.ryujinx.app/ryubing/ryujinx/-/releases",
+            "name": "Ryubing",
+            "tag": "Nintendo Switch; PC"
+        },
+        {
+            "link": "https://git.743378673.xyz/MeloNX/MeloNX",
+            "name": "MeloNX",
+            "tag": "Nintendo Switch; iOS"
+        },
+        {
+            "link": "https://git.743378673.xyz/MeloNX/MeloNX",
+            "name": "MeloNX",
+            "tag": "Nintendo Switch; iOS"
+        },
+        {
+            "link": "https://github.com/Kenji-NX/Android-Releases/releases/tag/2.0.4.1",
+            "name": "Kenji-NX",
+            "tag": "Nintendo Switch; Android"
         },
         {
             "link": "https://www.duckstation.org/",
@@ -286,9 +317,51 @@
             "tag": "Dreamcast"
         },
         {
-            "title": "Emulators"
+            "link": "https://xemu.app/",
+            "name": "xemu",
+            "tag": "OG Xbox"
+        },
+        {
+            "link": "https://xenia.jp/",
+            "name": "Xenia",
+            "tag": "Xbox 360"
+        },
+        {
+            "link": "https://openemu.org/",
+            "name": "OpenEmu",
+            "tag": "Multi-system; Mac"
+        },
+        {
+            "link": "https://www.retroarch.com/",
+            "name": "RetroArch",
+            "tag": "Multi-system; universal"
+        },
+        {
+            "link": "https://github.com/Swordfish90/Lemuroid",
+            "name": "Lemuroid",
+            "tag": "Multi-system; universal"
+        },
+        {
+            "link": "https://www.mamedev.org/",
+            "name": "MAME",
+            "tag": "Arcade, Game & Watch, WonderSwan and others"
+        },
+        {
+            "link": "https://github.com/ChefKissInc/QEMUAppleSilicon",
+            "name": "QEMU-Apple-Silicon",
+            "tag": "iOS 14 beta 5"
+        },
+        {
+            "link": "https://www.emaculation.com/doku.php/mini_vmac",
+            "name": "Mini vMac",
+            "tag": "Old Macintosh System"
+        },
+        {
+            "link": "https://touchhle.org/",
+            "name": "touchHLE",
+            "tag": "iPhoneOS 2.x-3.0"
         }
-    ],    
+    ],
     "misc": [
         {
             "link": "mwrtng/index.html",
@@ -319,12 +392,12 @@
             "title": "Miscellaneous"
         }
     ],
-    "gudlinux": [      
+    "gudlinux": [
         {
             "link": "https://archlinux.org/download/",
             "name": "Arch Linux",
             "icon": "https://static-00.iconduck.com/assets.00/archlinux-icon-2048x2048-q7549ths.png",
-            "tag": "Lightweight, but advanced. Reading the manual/wiki is necessary"
+            "tag": "Reading the manual is needed"
         },
         {
             "link": "https://artixlinux.org/",
@@ -343,6 +416,11 @@
             "name": "Manjaro",
             "icon": "https://manjaro.org/logo.svg",
             "tag": "Arch if it was easy"
+        },
+        {
+            "link": "https://github.com/mewity1816/archangel-linux",
+            "name": "Archangel Linux",
+            "tag": "shameless self promotion never hurt anyone"
         },
         {
             "link": "https://linuxmint.com/",
@@ -379,15 +457,25 @@
             "icon": "https://github.com/CharlotteCross1998/linuwux/blob/main/uwuntu.png?raw=true",
             "name": "Uwuntu",
             "kmoji": "true",
-            "tag": "dawg",
-            "kaomojis": ["(˶˃ ᵕ ˂˶)","( ´∀｀)","(=^x^=)","(*･ω･)ﾉ","(´・ω・｀)","((((；ﾟДﾟ)))))))","＼＼\\٩( 'ω' )و //／／","((o(^∇^)o))","(#^.^#)","( ＾∀＾)"]
-        },      
+            "kaomojis": [
+                "(˶˃ ᵕ ˂˶)",
+                "( ´∀｀)",
+                "(=^x^=)",
+                "(*･ω･)ﾉ",
+                "(´・ω・｀)",
+                "((((；ﾟДﾟ)))))))",
+                "＼＼\\٩( 'ω' )و //／／",
+                "((o(^∇^)o))",
+                "(#^.^#)",
+                "( ＾∀＾)"
+            ]
+        },
         {
             "link": "https://ubuntu.com/download/desktop",
             "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/UbuntuCoF.svg/1024px-UbuntuCoF.svg.png",
             "name": "Normal Ubuntu",
             "tag": "eh"
-        },        
+        },
         {
             "link": "https://archive.org/details/hannah_montana_linux_x86_basic_edition_202201",
             "icon": "https://fiu-original.b-cdn.net/fontsinuse.com/use-images/N210/210188/210188.png?filename=1200px-Disney_Hannah_Montana_Logo.svg.png",
@@ -435,6 +523,10 @@
     ],
     "cred": [
         {
+            "name": "Discord user 'mewity'",
+            "tag": "Ideas, suggestions, feedback and emotional support"
+        },
+        {
             "link": "https://developer.mozilla.org/",
             "name": "mdn docs",
             "tag": "Javascript part of the website"
@@ -454,18 +546,9 @@
             "tag": "Both"
         },
         {
-            "link": "https://stackoverflow.com/questions/35361986/css-gradient-checkerboard-pattern",
-            "name": "Background",
-            "tag": "the checkerboard thingy yk"
-        },
-        {
             "link": "https://github.com/glreno/oneko",
             "name": "Oneko",
             "tag": "ohoho you're so portuguese"
-        },
-        {
-            "name": "Discord user 'mewity'",
-            "tag": "Ideas, suggestions, feedback and emotional support"
         },
         {
             "title": "Credits section"
@@ -473,7 +556,14 @@
     ],
     "quotes": [
         {
-            "nmpinla": ["get real", "optijuegos X optiredlinestealer ✓", "arch btw", "i heart vscode", "do you know da wae?"]
+            "nmpinla": [
+                "get real",
+                "optijuegos X optiredlinestealer ✓",
+                "arch btw",
+                "i heart vscode",
+                "do you know da wae?",
+                "este burrito es muy bueno, pero necesito salsa verde"
+            ]
         }
     ]
 }

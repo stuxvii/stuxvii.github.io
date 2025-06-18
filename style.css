@@ -1,57 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
 /*YES WE ABSOLUTELY DO NEED THIS WEBSITE TO HAVE ANIMATIONS.
 ANY OTHER QUESTIONS????????????????????????????????????? */
-:root {
-    --colour1:#222222;
-    --colour2: #2b2f35;
-    --size: 128px;
-}
-@keyframes movebg{
-    0% {background-position: right 0px bottom 0px;}
-    100% {background-position: right -128px bottom -128px;}
-}
 
 @keyframes titleintro {
-    0% {rotate: 2deg;}
-    100% {rotate: -2deg;}
+    0% {
+        rotate: 2deg;
+    }
+
+    100% {
+        rotate: -2deg;
+    }
 }
 
 @keyframes pagecontent {
-    0% {rotate: -2deg;}
-    100% {rotate: 2deg;}
+    0% {
+        rotate: -2deg;
+    }
+
+    100% {
+        rotate: 2deg;
+    }
 }
 
-html,body { min-height:100%; }
+html,
+body {
+    min-height: 100%;
+}
+
 html {
     overflow: hidden;
 }
+
 body {
     overflow-x: clip;
-    font-family: "VT323", monospace;
+    font-family: "Rajdhani", monospace;
     font-weight: 400;
     font-style: normal;
-    color:white;
-    background: repeating-conic-gradient(#222222 0 25%, #2b2f35 0 50%) ;
-    background-size: var(--size) var(--size);
+    color: #ff5d5e;
+    background: linear-gradient(130deg, #39191e, #0e0e17 50%);
     margin: 0;
     padding: 0;
     animation-name: movebg;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    user-select: none;
 }
 
 img {
-    position:relative;
+    position: relative;
     left: 6px;
     top: 4px;
     width: 32px;
 }
+
 .about {
     position: absolute;
     bottom: 0;
     top: 350px;
 }
+
 .titol {
     font-size: 8vh;
     position: relative;
@@ -65,27 +74,30 @@ img {
     padding: 0;
     text-decoration: wavy underline;
 }
+
 strong {
     position: relative;
-    font-size: 0.6em;
-    border: 2px solid;
-    background-color: #585858;
-    color: rgb(255, 255, 255);
+    font-size: 0.5em;
+    border: 1px solid;
+    background-color: #0e0e17;
     border-radius: 0.2em;
-    padding: 2px;
-    bottom: 0.2vw;
+    padding-inline: 2px;
+    bottom: 0.2vh;
+    box-shadow: 0px 0px 10px #f75049;
 }
+
 .splash {
     box-shadow: 0px 0px 10px rgb(255, 255, 255);
     font-size: 4vw;
     position: relative;
 }
+
 .titlebar {
     text-shadow: 0px 0px 10px rgb(255, 255, 255);
-    font-size: 2em;
+    font-size: 4vh;
     padding-top: 10px;
     padding-bottom: 10px;
-    display: flex;
+    position: relative;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -99,19 +111,16 @@ strong {
 .menu {
     display: flex;
     flex-wrap: nowrap;
-    
     font-size: 2em;
-    display: flex;
-    
 }
 
-.menu > div.menu {
-  background-color: #f1f1f1;
-  width: 10px;
-  margin: 10px;
-  font-size: 30px;
-  text-align: center;
-  line-height: 75px;
+.menu>div.menu {
+    background-color: #f1f1f1;
+    width: 10px;
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 75px;
 }
 
 .a2763 {
@@ -119,59 +128,47 @@ strong {
     z-index: -1;
     min-height: 30vh;
 }
-@media only screen and (min-width: 880px) {
-    .menu {
-    position: absolute;
-    top:  50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    align-items: center;
-    justify-content: center;
-    }
-    .a2763 {
-    min-width: 355px;
-    }
-    ul {
-    max-height: 60vh;
-    min-height: 30vh;
-    }
+
+img {
+    width: 0.9em;
 }
-@media only screen and (max-width: 878px) {
-    img {
-        width: 24px;
-    }
-    .menu {
-        flex-direction: column;
-    }
-    .subtitle {
-        font-size: 1.5em;
-    }
-    .splash {
-        font-size: 8vh;
-        bottom: 10vh;
-    }
-    .details {
-        min-height: 20vh;
-    }
-    .menu {
-    margin-top: 30vh;
+
+.menu {
+    flex-direction: column;
+}
+
+.subtitle {
+    font-size: 1.5em;
+}
+
+.splash {
+    font-size: 8vh;
+    bottom: 10vh;
+}
+
+.details {
+    min-height: 0vh;
+}
+
+.menu {
     max-width: 100vh;
     max-height: 60vh;
     min-width: 90vw;
     position: fixed;
     font-size: 3vh;
-    top:  20%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     align-items: center;
     justify-content: center;
-    }
 }
+
 
 ul {
     margin: 2px;
     overflow-y: auto;
-    border: 10px solid #585858;
+    border: 3pt solid #ff3b45;
+    border-radius: 0px 0px 15px;
     z-index: 1;
 }
 
@@ -179,25 +176,47 @@ li {
     margin-left: -40px;
     padding-top: 0px;
     list-style-type: none;
-    cursor:default;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    cursor: default;
 }
+
 li:hover {
-    background-color: white;
+    background-color: #ff3b45;
     color: black;
-    border-color: white;
+    border-color: #ff3b45;
 }
+
 li:active {
     background-color: rgb(0, 0, 0);
     color: rgb(0, 204, 255);
 }
+
+li:hover strong {
+    color: #ff3b45;
+    border-color: #0e0e17;
+}
+
 .selecteditem {
-    background-color: white;
+    background-color: #ff3b45;
     color: black;
-    border-color: white;
+    border-color: #ff3b45;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffffff00;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #f75049;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #f75049;
 }

@@ -334,7 +334,7 @@
         {
             "link": "https://github.com/Swordfish90/Lemuroid",
             "name": "Lemuroid",
-            "tag": "Multi-system; universal"
+            "tag": "Multi-system; Android"
         },
         {
             "link": "https://www.mamedev.org/",
@@ -342,19 +342,24 @@
             "tag": "Arcade, Game & Watch, WonderSwan and others"
         },
         {
-            "link": "https://github.com/ChefKissInc/QEMUAppleSilicon",
-            "name": "QEMU-Apple-Silicon",
-            "tag": "iOS 14 beta 5"
-        },
-        {
             "link": "https://www.emaculation.com/doku.php/mini_vmac",
             "name": "Mini vMac",
             "tag": "Old Macintosh System"
         },
         {
+            "link": "articles/macosxemu.html",
+            "name": "Mac OSX 10.0-10.3",
+            "tag": "Guide"
+        },
+        {
             "link": "https://touchhle.org/",
             "name": "touchHLE",
             "tag": "iPhoneOS 2.x-3.0"
+        },
+        {
+            "link": "https://github.com/ChefKissInc/QEMUAppleSilicon",
+            "name": "QEMU-Apple-Silicon",
+            "tag": "iOS 14 beta 5"
         }
     ],
     "misc": [

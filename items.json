@@ -14,10 +14,6 @@
             "section": "tools"
         },
         {
-            "name": "games optimized by yours truly",
-            "section": "acdbxoptigames"
-        },
-        {
             "name": "trusted software download sites",
             "section": "games"
         },
@@ -50,6 +46,11 @@
             "name": "Windows Optimization Script"
         },
         {
+            "link": "https://github.com/henrypp/memreduct",
+            "name": "MemReduct",
+            "tag": "Clean garbage memory left out by poorly coded programs"
+        },
+        {
             "link": "https://www.ventoy.net/",
             "name": "Ventoy",
             "tag": "Quite nice USB Multiboot tool"
@@ -72,17 +73,22 @@
         {
             "link": "https://mpv.io/",
             "name": "MPV",
-            "tag": "Media Player"
+            "tag": "Lightweight Media Player"
         },
         {
             "link": "https://code.visualstudio.com/",
             "name": "Visual Studio Code",
-            "tag": "Coding centered text editor"
+            "tag": "Coding text editor (FOSS, but electron... sigh...)"
         },
         {
             "link": "https://www.sublimetext.com/",
             "name": "Sublime Text",
-            "tag": "Normal text editor"
+            "tag": "Coding text editor (Trial)"
+        },
+        {
+            "link": "https://kate-editor.org/",
+            "name": "Kate",
+            "tag": "Coding text editor (FOSS and Qt)"
         },
         {
             "link": "https://cobalt.tools/",
@@ -92,7 +98,42 @@
         {
             "link": "https://www.smtube.org/",
             "name": "smtube",
-            "tag": "Lightweight YouTube client"
+            "tag": "Lightweight YouTube client for PC"
+        },
+        {
+            "link": "https://github.com/prateekmedia/pstube",
+            "name": "pstube",
+            "tag": "anoooother lightweight yt client for pc"
+        },
+        {
+            "link": "https://github.com/polymorphicshade/Tubular",
+            "name": "Tubular",
+            "tag": "Lightweight YouTube client for Android 5.0+"
+        },
+        {
+            "link": "https://nginx.org/",
+            "name": "nginx",
+            "tag": "Lightweight HTTP web server"
+        },
+        {
+            "link": "https://simplewebserver.org/",
+            "name": "Simple Web Server",
+            "tag": "Based on electron... smh... whatever"
+        },
+        {
+            "link": "https://handbrake.fr/",
+            "name": "Handbrake",
+            "tag": "GUI tool for manipulating multimedia files"
+        },
+        {
+            "link": "https://ffmpeg.org/",
+            "name": "FFmpeg",
+            "tag": "CLI tool for manipulating multimedia files"
+        },
+        {
+            "link": "https://8mb.video/",
+            "name": "8mb.video",
+            "tag": "Easy, online, and ad-free video compressing website"
         }
     ],
     "acdbxoptigames": [
@@ -124,6 +165,16 @@
             "link": "https://cs.rin.ru/forum/viewforum.php?f=32",
             "name": "cs.rin.ru",
             "tag": "Forum, Login needed"
+        },
+        {
+            "link": "https://www.artistapirata.com/",
+            "name": "Artista Pirata",
+            "tag": "Stuff like Adobe, Sony Vegas, and misc. (Spanish)"
+        },
+        {
+            "link": "https://www.apkmirror.com/",
+            "name": "APKMirror",
+            "tag": "Only APKs already available for free in the Play Store"
         },
         {
             "link": "https://fmhy.net/",
@@ -497,7 +548,8 @@
     "cred": [
         {
             "name": "Discord user 'mewity'",
-            "tag": "Ideas, suggestions, feedback and emotional support"
+            "tag": "Ideas, suggestions, feedback and emotional support",
+            "exec": "mwrtng();"
         },
         {
             "link": "https://developer.mozilla.org/",
@@ -530,9 +582,14 @@
                 "get real",
                 "optijuegos X optiredlinestealer ✓",
                 "arch btw",
-                "i heart vscode",
                 "do you know da wae?",
-                "este burrito es muy bueno, pero necesito salsa verde"
+                "este burrito es muy bueno, pero necesito salsa verde",
+                "girl i know you want dis dihh💔",
+                "You Have Not Win!",
+                "YOUR TAKING TOO LONG",
+                "i just wanna get geeked all night",
+                "if i hit you with a W-Y-D you better not hit me with an H-E-Y",
+                "only pounds i need are me pounding your mother"
             ]
         }
     ]

@@ -8,7 +8,8 @@ initjson();
 
 const jsonfile = new Request("items.json");
 const listing = document.getElementById("listingg");
-const results = document.getElementById("contentlist")
+const results = document.getElementById("contentlist");
+const u = new Audio('uuu.ogg');
 var animate = true;
 var section = "greetmsg";
 
@@ -24,9 +25,9 @@ async function start() {
 
     item.appendChild(document.createElement("span")).textContent = sel.name;
     if (typeof sel.exec !== 'undefined') {
-      item.setAttribute("onclick", `${(sel.exec)}`);
+      item.setAttribute("onmousedown", `${(sel.exec)}`);
     } else {
-      item.setAttribute("onclick", `btndisplay('${(sel.section)}')`);
+      item.setAttribute("onmousedown", `btndisplay('${(sel.section)}')`);
     }
     item.setAttribute("id", `${(sel.section)}`);
     listing.appendChild(item);
@@ -65,21 +66,19 @@ async function btndisplay(choice) {
           item.appendChild(document.createElement("strong")).textContent = sel.tag;
         }
         if (typeof sel.link !== 'undefined') {
-          item.setAttribute("onclick", `if (confirm('would you like to go to ${(sel.link)}?') == true) {
+          item.setAttribute("onmousedown", `if (confirm('would you like to go to ${(sel.link)}?') == true) {
                 location.href=\'${(sel.link)}\';
               }`
           );
-        } else {
-          item.setAttribute("onclick", `YOUUU();`);
         }
         if (typeof sel.dl !== 'undefined') {
-          item.setAttribute("onclick", `if (confirm('would you like to download a file from \\n${(sel.link)}\\n') == true) {
+          item.setAttribute("onmousedown", `if (confirm('would you like to download a file from \\n${(sel.link)}\\n') == true) {
                 downloadFile('${(sel.link)}', '${(sel.filename)}');
               }`
           );
         }
         if (typeof sel.exec !== 'undefined') {
-          item.setAttribute("onclick", `${(sel.exec)}`);
+          item.setAttribute("onmousedown", `${(sel.exec)}`);
         }
         results.appendChild(item);
       }
@@ -96,9 +95,11 @@ function pickRandomProperty(obj) {
   return result;
 }
 
-function YOUUU() {
-  const u = new Audio('uuu.ogg');
+function mwrtng() {
   u.play();
+  setTimeout(() => {
+    location.href = "mwrtng";
+  }, 1300);
 }
 
 async function downloadFile(url, filename) { // https://muhimasri.com/blogs/how-to-save-files-in-javascript/
@@ -123,5 +124,12 @@ async function downloadFile(url, filename) { // https://muhimasri.com/blogs/how-
     URL.revokeObjectURL(blobUrl);
   } catch (err) {
     console.error("Error in fetching and downloading file:", err);
+  }
+}
+
+async function skibidi() {
+  for (const sel of data.quotes) {
+    let rngsubtitle = pickRandomProperty(sel.nmpinla);
+    document.getElementById('subtitle').innerHTML = sel.nmpinla[rngsubtitle];
   }
 }

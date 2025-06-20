@@ -62,7 +62,7 @@ img {
 }
 
 .titol {
-    font-size: 8vh;
+    font-size: 4vh;
     position: relative;
     text-align: center;
     animation-name: titleintro;
@@ -77,7 +77,7 @@ img {
 
 strong {
     position: relative;
-    font-size: 0.5em;
+    font-size: 0.4em;
     border: 1px solid;
     background-color: #0e0e17;
     border-radius: 0.2em;
@@ -86,15 +86,9 @@ strong {
     box-shadow: 0px 0px 10px #f75049;
 }
 
-.splash {
-    box-shadow: 0px 0px 10px rgb(255, 255, 255);
-    font-size: 4vw;
-    position: relative;
-}
-
 .titlebar {
     text-shadow: 0px 0px 10px rgb(255, 255, 255);
-    font-size: 4vh;
+    font-size: 3vh;
     padding-top: 10px;
     padding-bottom: 10px;
     position: relative;
@@ -155,7 +149,7 @@ img {
     max-height: 60vh;
     min-width: 90vw;
     position: fixed;
-    font-size: 3vh;
+    font-size: 1.2em;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

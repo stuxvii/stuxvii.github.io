@@ -40,10 +40,6 @@
         {
             "name": "credits",
             "section": "cred"
-        },
-        {
-            "name": "toggle animations",
-            "exec": "animationtoggle()"
         }
     ],
     "tools": [
@@ -97,11 +93,6 @@
             "link": "https://www.smtube.org/",
             "name": "smtube",
             "tag": "Lightweight YouTube client"
-        },
-        {
-            "link": "https://httpd.apache.org/",
-            "name": "Apache HTTP Server",
-            "tag": "For advanced users"
         }
     ],
     "acdbxoptigames": [
@@ -114,9 +105,6 @@
             "link": "https://gofile.io/d/n72s83",
             "name": "Balatro",
             "tag": "Mobile Version"
-        },
-        {
-            "title": "optimized games"
         }
     ],
     "games": [
@@ -151,9 +139,6 @@
             "link": "https://archive.org/",
             "name": "Internet Archive",
             "tag": "Older games, and miscellaneous programs"
-        },
-        {
-            "title": "do what u want cause a pirate is free, u are a pirate!"
         }
     ],
     "rnggamelist": [
@@ -196,9 +181,6 @@
             "link": "https://sonolus.com/en",
             "name": "Sonolus",
             "tag": "Next-Generation Rhythm Game; Android & iOS"
-        },
-        {
-            "title": "Legally-ish free games"
         }
     ],
     "emu": [
@@ -387,9 +369,6 @@
             "link": "https://www.windows93.net/",
             "tag": "Toy",
             "name": "Windows 93"
-        },
-        {
-            "title": "Miscellaneous"
         }
     ],
     "gudlinux": [
@@ -481,9 +460,6 @@
             "icon": "https://fiu-original.b-cdn.net/fontsinuse.com/use-images/N210/210188/210188.png?filename=1200px-Disney_Hannah_Montana_Logo.svg.png",
             "name": "Hannah Montannah Linux",
             "tag": "CERTIFIED HOOD CLASSIC"
-        },
-        {
-            "title": "Kewl Linux Distros"
         }
     ],
     "iosjailbreak": [
@@ -516,9 +492,6 @@
             "name": "MeridianFix",
             "link": "https://lukezgd.github.io/MeridianFix/",
             "tag": "iOS 10; iPhone 7 onwards"
-        },
-        {
-            "title": "iOS Jailbreaking sites"
         }
     ],
     "cred": [
@@ -549,9 +522,6 @@
             "link": "https://github.com/glreno/oneko",
             "name": "Oneko",
             "tag": "ohoho you're so portuguese"
-        },
-        {
-            "title": "Credits section"
         }
     ],
     "quotes": [

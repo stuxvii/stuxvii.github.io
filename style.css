@@ -228,9 +228,7 @@ a:active {
 }
 .art {
     border: 1px solid #ff3b45;
-    max-width: 100vh;
-    max-height: 60vh;
-    min-width: 90vw;
+    max-height: 90vh;
     position: fixed;
     font-size: 3vh;
     overflow: auto;
@@ -250,7 +248,7 @@ a:active {
     padding: 5px;
     color: #bfbfbf;
 }
-h3 {
+h3, h4 {
     padding: 0;
     margin: 0;
 }

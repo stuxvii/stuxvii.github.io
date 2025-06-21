@@ -10,7 +10,7 @@
             "section": "greetmsg"
         },
         {
-            "name": "list of neat tools and apps",
+            "name": "list of neat tools, apps and some personal stuff",
             "section": "tools"
         },
         {
@@ -102,6 +102,11 @@
             "link": "https://httpd.apache.org/",
             "name": "Apache HTTP Server",
             "tag": "For advanced users"
+        },
+        {
+            "link": "articles/decompbartbash.html",
+            "name": "Bart Bash decompile guide",
+            "tag": "click the bart"
         }
     ],
     "acdbxoptigames": [

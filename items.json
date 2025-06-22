@@ -2,6 +2,10 @@
     "greetmsg": [
         {
             "name": "Welcome to stuxvii.com! here you can find ummm cool stuff just click an option :p"
+        },
+        {
+            "name": "Why does this website look like this?",
+            "link": "https://motherfuckingwebsite.com/"
         }
     ],
     "options": [
@@ -211,6 +215,11 @@
         {
             "link": "https://www.haxball.com/",
             "name": "Haxball",
+            "tag": "Browser, PC"
+        },
+        {
+            "link": "https://isle.pizza/",
+            "name": "LEGO Island",
             "tag": "Browser, PC"
         },
         {
@@ -594,7 +603,8 @@
                 "YOUR TAKING TOO LONG",
                 "i just wanna get geeked all night",
                 "if i hit you with a W-Y-D you better not hit me with an H-E-Y",
-                "only pounds i need are me pounding your mother"
+                "british pounds? only pounds i need are me pounding your mother",
+                "yall were making fun of plankton for dating a computer screen now look at you rascals"
             ]
         }
     ]

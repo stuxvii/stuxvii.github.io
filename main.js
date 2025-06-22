@@ -37,6 +37,9 @@ async function start() {
     const item = document.createElement("li");
     item.appendChild(document.createElement("span")).textContent = sel.name;
     results.appendChild(item);
+    if (typeof sel.link !== 'undefined') {
+      item.setAttribute("onmousedown", `location.href=\'${(sel.link)}\';`);
+    }
   }
 }
 
@@ -54,9 +57,6 @@ async function btndisplay(choice) {
         results.appendChild(item);
       }
       if (typeof sel.name !== 'undefined') {
-        if (typeof sel.icon !== 'undefined') {
-          item.appendChild(document.createElement("img")).src = sel.icon;
-        }
         item.appendChild(document.createElement("span")).textContent = ' ' + sel.name + ' ';
         if (typeof sel.kmoji !== 'undefined') {
           let rngkaomoji = pickRandomProperty(sel.kaomojis);

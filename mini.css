@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+/*YES WE ABSOLUTELY DO NEED THIS WEBSITE TO HAVE ANIMATIONS.
+ANY OTHER QUESTIONS????????????????????????????????????? */
+
+html,
+body {
+    min-height: 100%;
+}
+
+
+
+body {
+    overflow-x: clip;
+    font-family: "Rajdhani", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: #ff5d5e;
+    background: #0e0e17;
+    margin: 0;
+    padding: 0;
+    animation-name: movebg;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    user-select:contain;
+}
+
+img {
+    position: relative;
+    left: 6px;
+    top: 4px;
+    width: 32px;
+}
+
+.about {
+    position: absolute;
+    bottom: 0;
+    top: 350px;
+}
+
+.titol {
+    font-size: 4vh;
+    position: relative;
+    text-align: center;
+    animation-name: titleintro;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    margin: 0;
+    padding: 0;
+    text-decoration: wavy underline;
+}
+
+strong {
+    position: relative;
+    font-size: 0.4em;
+    border: 1px solid;
+    background-color: #0e0e17;
+    border-radius: 0.2em;
+    padding-inline: 2px;
+    bottom: 0.2vh;
+    box-shadow: 0px 0px 10px #f75049;
+}
+
+.titlebar {
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+    font-size: 3vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    animation-name: pagecontent;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+/*
+.menu {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 2em;
+}
+
+.menu>div.menu {
+    background-color: #f1f1f1;
+    width: 10px;
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 75px;
+}*/
+
+.a2763 {
+    overflow-y: auto;
+    z-index: -1;
+    min-height: 30vh;
+}
+
+img {
+    width: 0.9em;
+}
+
+.menu {
+    flex-direction: column;
+}
+
+.subtitle {
+    font-size: 1.5em;
+}
+
+.splash {
+    font-size: 8vh;
+    bottom: 10vh;
+}
+
+.details {
+    min-height: 0vh;
+}
+
+.menu {
+    max-width: 100vh;
+    max-height: 60vh;
+    min-width: 90vw;
+    position: fixed;
+    font-size: 1.7em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+}
+
+
+ul {
+    margin: 2px;
+    overflow-y: auto;
+    border: 3pt solid #ff3b45;
+    border-radius: 0px 0px 15px;
+    z-index: 1;
+}
+
+li {
+    margin-left: -40px;
+    padding-top: 0px;
+    list-style-type: none;
+    cursor: default;
+}
+
+li:hover {
+    background-color: #ff3b45;
+    color: black;
+    border-color: #ff3b45;
+}
+
+li:active {
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 204, 255);
+}
+
+li:hover strong {
+    color: #ff3b45;
+    border-color: #0e0e17;
+}
+
+.selecteditem {
+    background-color: #ff3b45;
+    color: black;
+    border-color: #ff3b45;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffffff00;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #f75049;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #f75049;
+}
+a {
+    color: #5ef6ff;
+}
+a:active {
+    color: #ffffff;
+}
+.art {
+    border: 1px solid #ff3b45;
+    max-width: 100vh;
+    max-height: 60vh;
+    min-width: 90vw;
+    position: fixed;
+    font-size: 3vh;
+    overflow: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    user-select: text;
+    padding-left: 5px;
+}
+.code {
+    background-color: #000000;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 0.8em;
+    font-family: Consolas, Menlo, "courier new", monospace;
+    padding: 5px;
+    color: #bfbfbf;
+}
+h3 {
+    padding: 0;
+    margin: 0;
+}
+.list {
+    list-style-type: disc;
+    list-style: disc;
+    display: list-item;
+    margin-left : 1.4em;
+}
+
+*::selection {
+  background-color: transparent;
+}
+*:hover {
+  cursor: default;
+}

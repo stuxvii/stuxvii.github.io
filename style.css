@@ -1,28 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
-/*YES WE ABSOLUTELY DO NEED THIS WEBSITE TO HAVE ANIMATIONS.
-ANY OTHER QUESTIONS????????????????????????????????????? */
-
-@keyframes titleintro {
-    0% {
-        rotate: 2deg;
-    }
-
-    100% {
-        rotate: -2deg;
-    }
-}
-
-@keyframes pagecontent {
-    0% {
-        rotate: -2deg;
-    }
-
-    100% {
-        rotate: 2deg;
-    }
-}
-
 html,
 body {
     min-height: 100%;
@@ -37,8 +14,8 @@ body {
     font-family: "Rajdhani", monospace;
     font-weight: 400;
     font-style: normal;
-    color: #ff5d5e;
-    background: linear-gradient(130deg, #39191e, #0e0e17 50%);
+    color: #ffffff;
+    background: #0e0e17;
     margin: 0;
     padding: 0;
     animation-name: movebg;
@@ -46,13 +23,6 @@ body {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     user-select:contain;
-}
-
-img {
-    position: relative;
-    left: 6px;
-    top: 4px;
-    width: 32px;
 }
 
 .about {
@@ -64,12 +34,6 @@ img {
 .titol {
     font-size: 4vh;
     position: relative;
-    text-align: center;
-    animation-name: titleintro;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
     margin: 0;
     padding: 0;
     text-decoration: wavy underline;
@@ -83,7 +47,7 @@ strong {
     border-radius: 0.2em;
     padding-inline: 2px;
     bottom: 0.2vh;
-    box-shadow: 0px 0px 10px #f75049;
+    box-shadow: 0px 0px 10px #0e0e17;
 }
 
 .titlebar {
@@ -92,14 +56,6 @@ strong {
     padding-top: 10px;
     padding-bottom: 10px;
     position: relative;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    animation-name: pagecontent;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
 }
 
 .menu {
@@ -113,7 +69,6 @@ strong {
     width: 10px;
     margin: 10px;
     font-size: 30px;
-    text-align: center;
     line-height: 75px;
 }
 
@@ -121,10 +76,6 @@ strong {
     overflow-y: auto;
     z-index: -1;
     min-height: 30vh;
-}
-
-img {
-    width: 0.9em;
 }
 
 .menu {
@@ -150,20 +101,22 @@ img {
     min-width: 90vw;
     position: fixed;
     font-size: 1.7em;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    align-items: center;
-    justify-content: center;
 }
 
+
+.ooh {
+    position:fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 33;
+}
 
 ul {
     margin: 2px;
     overflow-y: auto;
-    border: 3pt solid #ff3b45;
     border-radius: 0px 0px 15px;
     z-index: 1;
+    font-size: 3vh;
 }
 
 li {
@@ -174,9 +127,9 @@ li {
 }
 
 li:hover {
-    background-color: #ff3b45;
+    background-color: #ffffff;
     color: black;
-    border-color: #ff3b45;
+    border-color: #ffffff;
 }
 
 li:active {
@@ -185,15 +138,16 @@ li:active {
 }
 
 li:hover strong {
-    color: #ff3b45;
+    color: #ffffff;
     border-color: #0e0e17;
 }
 
 .selecteditem {
-    background-color: #ff3b45;
+    background-color: #ffffff;
     color: black;
-    border-color: #ff3b45;
+    border-color: #ffffff;
 }
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -207,13 +161,15 @@ li:hover strong {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #f75049;
+    background: #ffffff;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #f75049;
+    background: #ffffff;
 }
+
+
 a {
     color: #5ef6ff;
 }
@@ -221,7 +177,7 @@ a:active {
     color: #ffffff;
 }
 .art {
-    border: 1px solid #ff3b45;
+    border: 1px solid #ffffff;
     max-height: 90vh;
     position: fixed;
     font-size: 3vh;

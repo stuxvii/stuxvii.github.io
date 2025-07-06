@@ -13,6 +13,19 @@ const u = new Audio('uuu.ogg');
 var animate = true;
 var section = "greetmsg";
 
+
+if (Math.floor(Math.random() * 12000) == 2763) {
+  femty()
+}
+
+function femty() {
+  const div = document.getElementById("ooh");
+  const femty = document.createElement("img");
+  femty.setAttribute("src", "femty.png");
+  femty.setAttribute("class", "ooh");
+  div.appendChild(femty);
+  console.log("CONGRATULATIONS!!!!!!!! yOU JST HIT THE 1 IN 12k CHANCE TO BE [[[femty]]] JMPSACERD!!!!!!!!!!! feel free to like. screen shot this. and umm just pin it on your wall or something... or you probably just ran the 'femty()' command now that i think about it... hm... this is awkward... if you DID do that do NOT pin this in your wall, you shameless CHEATER!!!!!!!!");
+}
 async function start() {
   for (const sel of data.quotes) {
     let rngsubtitle = pickRandomProperty(sel.nmpinla); // LET ME TELL YOU, I'M OUT HERE FROM A VERY FAR AWAY PLACE ALL FOR A CHANCE TO BE A STAR NOWHERE SEEMS TO BE TOO FAR 🗣️🗣️🗣️🔥🔥🔥🔥
@@ -65,6 +78,9 @@ async function btndisplay(choice) {
         if (typeof sel.tag !== 'undefined') {
           item.appendChild(document.createElement("strong")).textContent = sel.tag;
         }
+        if (typeof sel.xoxo !== 'undefined') {
+          item.setAttribute("style", "text-decoration: line-through")
+        }
         if (typeof sel.link !== 'undefined') {
           item.setAttribute("onmousedown", `if (confirm('would you like to go to ${(sel.link)}?') == true) {
                 location.href=\'${(sel.link)}\';
@@ -93,13 +109,6 @@ function pickRandomProperty(obj) {
     if (Math.random() < 1 / ++count)
       result = prop;
   return result;
-}
-
-function mwrtng() {
-  u.play();
-  setTimeout(() => {
-    location.href = "mwrtng";
-  }, 1300);
 }
 
 async function downloadFile(url, filename) { // https://muhimasri.com/blogs/how-to-save-files-in-javascript/

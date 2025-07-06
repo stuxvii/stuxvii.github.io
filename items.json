@@ -50,6 +50,11 @@
             "name": "Windows Optimization Script"
         },
         {
+            "link": "https://massgrave.dev/",
+            "name": "Activate Windows",
+            "tag": "free no virus 2021 legit (no but seriously it's safe)"
+        },
+        {
             "link": "https://github.com/henrypp/memreduct",
             "name": "MemReduct",
             "tag": "Clean garbage memory left out by poorly coded programs"
@@ -440,65 +445,50 @@
         {
             "link": "https://archlinux.org/download/",
             "name": "Arch Linux",
-            "icon": "https://static-00.iconduck.com/assets.00/archlinux-icon-2048x2048-q7549ths.png",
-            "tag": "Reading the manual is needed"
+            "tag": "RTFM"
         },
         {
             "link": "https://artixlinux.org/",
             "name": "Artix Linux",
-            "icon": "https://artixlinux.org/img/artix-logo.png",
             "tag": "Arch but if you don't like systemd"
         },
         {
             "link": "https://voidlinux.org/",
             "name": "Void Linux",
-            "icon": "https://voidlinux.org/assets/img/void_bg.png",
             "tag": "More lightweight, more advanced"
         },
         {
             "link": "https://manjaro.org/",
             "name": "Manjaro",
-            "icon": "https://manjaro.org/logo.svg",
             "tag": "Arch if it was easy"
-        },
-        {
-            "link": "https://github.com/mewity1816/archangel-linux",
-            "name": "Archangel Linux",
-            "tag": "shameless self promotion never hurt anyone"
         },
         {
             "link": "https://linuxmint.com/",
             "name": "Linux Mint",
-            "icon": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Linux_Mint_logo_without_wordmark.svg",
             "tag": "Good for beginners"
         },
         {
             "link": "https://system76.com/pop/",
-            "icon": "https://static-00.iconduck.com/assets.00/pop-os-icon-2048x2048-mjad7yws.png",
             "name": "Pop!_OS",
             "tag": "Good Nvidia support"
         },
         {
             "link": "https://tails.net/",
-            "icon": "https://static-00.iconduck.com/assets.00/distributor-logo-tails-icon-1024x1023-fnj80rfu.png",
             "name": "Tails",
             "tag": "Privacy centered, nothing is logged"
         },
         {
             "link": "https://www.alpinelinux.org/",
-            "icon": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Alpine_Linux_logo.png",
             "name": "Alpine Linux",
             "tag": "REALLY lightweight, not recommendable unless specific use cases"
         },
         {
             "link": "https://sourceforge.net/projects/archiveos/files/u/ubuntu-satanic/ubuntu-satanic-666.11-i386.iso/download",
-            "icon": "https://images.freeimages.com/clg/images/11/117270/pentagramme-taches-rouges_f",
             "name": "Satanic Ubuntu",
             "tag": "evil..... (32bit, outdated, do not connect to the internet)"
         },
         {
             "link": "https://uwuntuos.site/",
-            "icon": "https://github.com/CharlotteCross1998/linuwux/blob/main/uwuntu.png?raw=true",
             "name": "Uwuntu",
             "kmoji": "true",
             "kaomojis": [
@@ -516,13 +506,11 @@
         },
         {
             "link": "https://ubuntu.com/download/desktop",
-            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/UbuntuCoF.svg/1024px-UbuntuCoF.svg.png",
             "name": "Normal Ubuntu",
             "tag": "eh"
         },
         {
             "link": "https://archive.org/details/hannah_montana_linux_x86_basic_edition_202201",
-            "icon": "https://fiu-original.b-cdn.net/fontsinuse.com/use-images/N210/210188/210188.png?filename=1200px-Disney_Hannah_Montana_Logo.svg.png",
             "name": "Hannah Montannah Linux",
             "tag": "CERTIFIED HOOD CLASSIC"
         }
@@ -561,11 +549,6 @@
     ],
     "cred": [
         {
-            "name": "Discord user 'mewity'",
-            "tag": "Ideas, suggestions, feedback and emotional support",
-            "exec": "mwrtng();"
-        },
-        {
             "link": "https://developer.mozilla.org/",
             "name": "mdn docs",
             "tag": "Javascript part of the website"
@@ -588,14 +571,16 @@
             "link": "https://github.com/glreno/oneko",
             "name": "Oneko",
             "tag": "ohoho you're so portuguese"
+        },
+        {
+            "name": "Discord user 'mewity'",
+            "xoxo": "just know i'll miss you"
         }
     ],
     "quotes": [
         {
             "nmpinla": [
                 "get real",
-                "optijuegos X optiredlinestealer ✓",
-                "arch btw",
                 "do you know da wae?",
                 "este burrito es muy bueno, pero necesito salsa verde",
                 "girl i know you want dis dihh💔",
@@ -603,7 +588,7 @@
                 "YOUR TAKING TOO LONG",
                 "i just wanna get geeked all night",
                 "if i hit you with a W-Y-D you better not hit me with an H-E-Y",
-                "british pounds? only pounds i need are me pounding your mother",
+                "ooh minimalism",
                 "yall were making fun of plankton for dating a computer screen now look at you rascals"
             ]
         }

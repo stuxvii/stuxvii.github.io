@@ -17,7 +17,9 @@ var section = "greetmsg";
 if (Math.floor(Math.random() * 12000) == 2763) {
   femty()
 }
-
+if (Math.floor(Math.random() * 200) == 1) {
+  location.href = "https://www.youtube.com/watch?v=EOTAWLaDa58"
+}
 function femty() {
   const div = document.getElementById("ooh");
   const femty = document.createElement("img");

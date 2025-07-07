@@ -10,79 +10,81 @@
 </head>
 
 <body>
-    <a href="/">Go back to the main page</a>
-    <h1>Bart Bash (Godot, 0.06 version) "decompiled"!</h1>
-    Requirements:
-    <div class="list"><a href="https://github.com/GDRETools/gdsdecomp/releases/tag/v1.0.0-rc.2">gdsdecomp</a></div>
-    <div class="list"><a href="https://github.com/DmitriySalnikov/GodotPCKExplorer/tree/master/Bruteforcer">PCKBruteforcer</a></div>
-    <div class="list">Sigh, a working install of Windows 10.</div>
-    <div class="list"><a href="https://visualstudio.microsoft.com/">Visual Studio</a></div>
-    <br>
-    <h3>Guide</h3>
-    Download PCK Bruteforcer & gdsdecomp
-    <br>
-    Download the <a href="https://oxbowlakes.net/fewfe/neighbor.pck">.pck</a> and <a
-        href="https://oxbowlakes.net/fewfe/neighbor.wasm">.wasm</a> files
-    <br>
-    <br>
-    <h4>* Compile PCK Bruteforcer</h4>
-    PCK Bruteforcer doesn't have any available pre-built binaries, so you will have to compile this yourself to get
-    this up and running.
-    <br>
-    Open Visual Studio
-    <br>
-    Click "Clone a repository"
-    <br>
-    Enter "https://github.com/DmitriySalnikov/GodotPCKExplorer.git" in the repository location section and hit
-    "Clone"
-    <br>
-    When it finishes cloning, double click "GodotPCKExplorer.sln", open the Bruteforcer directory, double click the
-    PCKBruteforcer.UI file, and finally, hit the CTRL+F5 keys to build and run.
-    <br>
-    Bruteforce the encryption key with PCK Bruteforcer, place the .wasm in the .exe field (yes, because .wasm are
-    basically .exe files for web browsers) the .pck in the .pck field and hit "try to get the key"; After a while
-    it'll give you the key for that build.
-    <br>
-    <br>
-    Good job! Now open gdsdecomp, click the RE Tools button, set the key to the one PCK Bruteforcer gave you, and
-    export the .pck into a neatly organized folder.
-    <br>
-    Now not all assets will be converted from Godot's format into standard formats, so that's where you will have to
-    also convert every one of them into their corresponding original formats. DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    <br>
-    Bart Bash Version 0.06 AES Key: 293C9C02316F4B125971DB215ECD814B41AF63FB55811B33266414FFB4554ECA
-    <br>
-    <br>
-    <h3>Backstory</h3>
-    Recently i've seen a dumb little game pop-up in my TikTok FYP, and you probably have too.
-    <br>
-    It is called <a href="https://bartbash.com/">bartbash</a>, it's about clicking the bart, throwing the bart, and
-    profit™️
-    <br>
-    And as one does, i was curious about how it worked, extracting its assets and such.
-    <br>
-    As it was a godot web game, i decided to try to the devtools panel from my browser, to find any leads for
-    helping me begin to rip the assets,
-    <br>
-    <br>
-    To my surprise, this website had gone to many extents to hide its relics from me, as blocking every hotkey to
-    invoke the devtools panel, and making the whole page freeze when it was manually opened.
-    <br>
-    None of this stopped me really, as i could... technically open the devtools panel, see the requests that are
-    being made, and get to my target, the .pck and .wasm files that contain all the code, assets and plugins for the
-    project.
-    <br>
-    So i navigated to the Network section, found the files that are fetched from... another website..? whatever, i
-    just downloaded them to my computer
-    <br>
-    I brute forced the .pck with the appropriately named, PCK Bruteforcer (took ages.) which gave me a key which i
-    used in gdsdecomp to FINALLY unencrypt and extract the contents of the .pck which gave me a neatly organized
-    folder with the assets.
-    <br>
-    I then navigated my way to .godot/imported, and wah lah!!!!!!! the assets!!!! they were all in godot's
-    interpreted format tho, so i had to use gdsdecomp to finally extract them to something usable.
-    <br>
-    <br>
+    <div class="art">
+        <a href="/">Go back to the main page</a>
+        <h1>Bart Bash (Godot, 0.06 version) "decompiled"!</h1>
+        Requirements:
+        <div class="list"><a href="https://github.com/GDRETools/gdsdecomp/releases/tag/v1.0.0-rc.2">gdsdecomp</a></div>
+        <div class="list"><a href="https://github.com/DmitriySalnikov/GodotPCKExplorer/tree/master/Bruteforcer">PCK Bruteforcer</a></div>
+        <div class="list">Sigh, a working install of Windows 10</div>
+        <div class="list"><a href="https://visualstudio.microsoft.com/">Visual Studio</a></div>
+        <br>
+        <h3>Guide</h3>
+        Download PCK Bruteforcer & gdsdecomp
+        <br>
+        Download the <a href="https://oxbowlakes.net/fewfe/neighbor.pck">.pck</a> and <a
+            href="https://oxbowlakes.net/fewfe/neighbor.wasm">.wasm</a> files
+        <br>
+        <br>
+        <h4>* Compile PCK Bruteforcer</h4>
+        PCK Bruteforcer doesn't have any available pre-built binaries, so you will have to compile this yourself to get
+        this up and running.
+        <br>
+        Open Visual Studio
+        <br>
+        Click "Clone a repository"
+        <br>
+        Enter "https://github.com/DmitriySalnikov/GodotPCKExplorer.git" in the repository location section and hit
+        "Clone"
+        <br>
+        When it finishes cloning, double click "GodotPCKExplorer.sln", open the Bruteforcer directory, double click the
+        PCKBruteforcer.UI file, and finally, hit the CTRL+F5 keys to build and run.
+        <br>
+        Bruteforce the encryption key with PCK Bruteforcer, place the .wasm in the .exe field (yes, because .wasm are
+        basically .exe files for web browsers) the .pck in the .pck field and hit "try to get the key"; After a while
+        it'll give you the key for that build.
+        <br>
+        <br>
+        Good job! Now open gdsdecomp, click the RE Tools button, set the key to the one PCK Bruteforcer gave you, and
+        export the .pck into a neatly organized folder.
+        <br>
+        Now not all assets will be converted from Godot's format into standard formats, so that's where you will have to
+        also convert every one of them into their corresponding original formats. DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        <br>
+        Bart Bash Version 0.06 AES Key: 293C9C02316F4B125971DB215ECD814B41AF63FB55811B33266414FFB4554ECA
+        <br>
+        <br>
+        <h3>Backstory</h3>
+        Recently i've seen a dumb little game pop-up in my TikTok FYP, and you probably have too.
+        <br>
+        It is called <a href="https://bartbash.com/">bartbash</a>, it's about clicking the bart, throwing the bart, and
+        profit™️
+        <br>
+        And as one does, i was curious about how it worked, extracting its assets and such.
+        <br>
+        As it was a godot web game, i decided to try to the devtools panel from my browser, to find any leads for
+        helping me begin to rip the assets,
+        <br>
+        <br>
+        To my surprise, this website had gone to many extents to hide its relics from me, as blocking every hotkey to
+        invoke the devtools panel, and making the whole page freeze when it was manually opened.
+        <br>
+        None of this stopped me really, as i could... technically open the devtools panel, see the requests that are
+        being made, and get to my target, the .pck and .wasm files that contain all the code, assets and plugins for the
+        project.
+        <br>
+        So i navigated to the Network section, found the files that are fetched from... another website..? whatever, i
+        just downloaded them to my computer
+        <br>
+        I brute forced the .pck with the appropriately named, PCK Bruteforcer (took ages.) which gave me a key which i
+        used in gdsdecomp to FINALLY unencrypt and extract the contents of the .pck which gave me a neatly organized
+        folder with the assets.
+        <br>
+        I then navigated my way to .godot/imported, and wah lah!!!!!!! the assets!!!! they were all in godot's
+        interpreted format tho, so i had to use gdsdecomp to finally extract them to something usable.
+        <br>
+        <br>
+    </div>
     <script src="../oneko.js"></script>
 </body>
 

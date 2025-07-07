@@ -559,8 +559,9 @@
             "tag": "CSS part of the website"
         },
         {
-            "link": "https://fonts.google.com/",
-            "name": "google fonts"
+            "link": "https://int10h.org/",
+            "name": "INT10H",
+            "tag": "Main font"
         },
         {
             "link": "https://www.geeksforgeeks.org/",
@@ -580,16 +581,12 @@
     "quotes": [
         {
             "nmpinla": [
-                "get real",
-                "do you know da wae?",
                 "este burrito es muy bueno, pero necesito salsa verde",
-                "girl i know you want dis dihh💔",
-                "You Have Not Win!",
                 "YOUR TAKING TOO LONG",
                 "i just wanna get geeked all night",
                 "if i hit you with a W-Y-D you better not hit me with an H-E-Y",
-                "ooh minimalism",
-                "yall were making fun of plankton for dating a computer screen now look at you rascals"
+                "so retro",
+                "funding for this program was made possible by viewers like you"
             ]
         }
     ]

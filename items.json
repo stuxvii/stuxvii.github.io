@@ -1,7 +1,11 @@
 {
     "greetmsg": [
         {
-            "name": "Welcome to acdbx.top! here you can find ummm cool stuff just click an option :p"
+            "name": "----------------------------------------------------",
+            "exec": "lancer.play()"
+        },
+        {
+            "name": "Welcome to the acdbx.top web directory! here you can find ummm cool stuff just click an option :p"
         },
         {
             "name": "Why does this website look like this?",
@@ -10,16 +14,20 @@
     ],
     "options": [
         {
-            "name": "welcome",
+            "name": "",
             "section": "greetmsg"
         },
         {
-            "name": "list of neat tools, apps and some personal stuff",
-            "section": "tools"
+            "name": "enhance your Windows experience",
+            "section": "wintools"
         },
         {
-            "name": "trusted software download sites",
-            "section": "games"
+            "name": "sail the seas!",
+            "section": "dllistillegal"
+        },
+        {
+            "name": "android goodies",
+            "section": "android"
         },
         {
             "name": "unassorted list of games",
@@ -42,12 +50,25 @@
             "section": "cred"
         }
     ],
-    "tools": [
+    "wintools": [
         {
             "dl": true,
             "filename": "Zusier AIO Optimizer Script.bat",
             "link": "https://raw.githubusercontent.com/Zusier/Zusiers-optimization-Batch/refs/heads/master/Zusier%20AIO.bat",
-            "name": "Windows Optimization Script"
+            "name": "Windows Optimization Script",
+            "tag": "disables relatively useless services, startup processes; makes diverse changes to the registry"
+        },
+        {
+            "link": "https://github.com/ChrisTitusTech/winutil",
+            "name": "Chris Titus' winutil",
+            "tag": "Miscellaneous patches and system optimizations"
+        },
+        {
+            "dl": true,
+            "filename": "chboost.bat",
+            "link": "https://gist.githubusercontent.com/stuxvii/cfa1b18aee80972ee055f78c5c8aecad/raw/b4ac63578c64a022ea161040c441b68bf9543a44/chboost.bat",
+            "name": "Chorrer Booster (acidbox's version)",
+            "tag": "3939x better than optijuegos' trust frfr"
         },
         {
             "link": "https://massgrave.dev/",
@@ -60,109 +81,22 @@
             "tag": "Clean garbage memory left out by poorly coded programs"
         },
         {
-            "link": "https://www.ventoy.net/",
-            "name": "Ventoy",
-            "tag": "Quite nice USB Multiboot tool"
+            "link": "https://systeminformer.sourceforge.io/",
+            "name": "System Informer",
+            "tag": "task manager on steroids"
         },
         {
-            "link": "https://github.com/ungoogled-software/ungoogled-chromium/",
-            "name": "Ungoogled Chromium",
-            "tag": "What if Chrome was actually good?"
+            "link": "https://github.com/Blinue/Magpie",
+            "tag": "lossless scaling, but foss!",
+            "name": "Magpie"
         },
         {
-            "link": "https://github.com/Vencord/Vesktop",
-            "name": "Vesktop",
-            "tag": "Discord Client"
-        },
-        {
-            "link": "https://gopeed.com/",
-            "name": "Gopeed Download Manager",
-            "tag": "It's fast!"
-        },
-        {
-            "link": "https://mpv.io/",
-            "name": "MPV",
-            "tag": "Lightweight Media Player"
-        },
-        {
-            "link": "https://code.visualstudio.com/",
-            "name": "Visual Studio Code",
-            "tag": "Coding text editor (FOSS, but electron... sigh...)"
-        },
-        {
-            "link": "https://www.sublimetext.com/",
-            "name": "Sublime Text",
-            "tag": "Coding text editor (Trial)"
-        },
-        {
-            "link": "https://kate-editor.org/",
-            "name": "Kate",
-            "tag": "Coding text editor (FOSS and Qt)"
-        },
-        {
-            "link": "https://cobalt.tools/",
-            "name": "cobalt.tools",
-            "tag": "goated social media video download tool"
-        },
-        {
-            "link": "https://www.smtube.org/",
-            "name": "smtube",
-            "tag": "Lightweight YouTube client for PC"
-        },
-        {
-            "link": "https://github.com/prateekmedia/pstube",
-            "name": "pstube",
-            "tag": "anoooother lightweight yt client for pc"
-        },
-        {
-            "link": "https://github.com/polymorphicshade/Tubular",
-            "name": "Tubular",
-            "tag": "Lightweight YouTube client for Android 5.0+"
-        },
-        {
-            "link": "https://nginx.org/",
-            "name": "nginx",
-            "tag": "Lightweight HTTP web server"
-        },
-        {
-            "link": "https://simplewebserver.org/",
-            "name": "Simple Web Server",
-            "tag": "Based on electron... smh... whatever"
-        },
-        {
-            "link": "https://handbrake.fr/",
-            "name": "Handbrake",
-            "tag": "GUI tool for manipulating multimedia files"
-        },
-        {
-            "link": "https://ffmpeg.org/",
-            "name": "FFmpeg",
-            "tag": "CLI tool for manipulating multimedia files"
-        },
-        {
-            "link": "https://8mb.video/",
-            "name": "8mb.video",
-            "tag": "Easy, online, and ad-free video compressing website"
-        },
-        {
-            "link": "articles/decompbartbash.html",
-            "name": "Bart Bash decompile guide",
-            "tag": "click the bart"
+            "link": "https://www.special-k.info/",
+            "tag": "Enhance your gayming",
+            "name": "Special K"
         }
     ],
-    "acdbxoptigames": [
-        {
-            "link": "https://gofile.io/d/aTAnHR",
-            "name": "Balatro",
-            "tag": "PC Version"
-        },
-        {
-            "link": "https://gofile.io/d/n72s83",
-            "name": "Balatro",
-            "tag": "Mobile Version"
-        }
-    ],
-    "games": [
+    "dllistillegal": [
         {
             "link": "https://www.steamrip.com/",
             "name": "SteamRIP"
@@ -186,24 +120,56 @@
             "tag": "Stuff like Adobe, Sony Vegas, and misc. (Spanish)"
         },
         {
-            "link": "https://www.apkmirror.com/",
-            "name": "APKMirror",
-            "tag": "Only APKs already available for free in the Play Store"
-        },
-        {
             "link": "https://fmhy.net/",
             "name": "FREE MEDIA HECK YEAH",
             "tag": "General"
         },
         {
-            "link": "https://flashpointarchive.org/downloads",
-            "name": "Flashpoint Archive",
-            "tag": "Flash and other web games"
+            "link": "https://vimm.net/",
+            "name": "Vimm's Lair",
+            "tag": "Game ROMs for multiple console old and not-so-new."
         },
         {
             "link": "https://archive.org/",
             "name": "Internet Archive",
             "tag": "Older games, and miscellaneous programs"
+        }
+    ],
+    "android": [
+        {
+            "link": "https://f-droid.org/en/",
+            "name": "F-Droid",
+            "tag": "Miscellaneous utilities, tools and apps"
+        },
+        {
+            "link": "https://apt.izzysoft.de/fdroid/",
+            "name": "IzzyOnDroid",
+            "tag": "F-Droid repo that contains more utils, tools and apps"
+        },
+        {
+            "link": "https://www.openapk.net/",
+            "name": "OpenAPK",
+            "tag": "More utils, tools and apps"
+        },
+        {
+            "link": "https://www.apkmirror.com/",
+            "name": "APKMirror",
+            "tag": "Old versions of android apps"
+        },
+        {
+            "link": "https://termux.dev/en/",
+            "name": "Termux",
+            "tag": "Ol' reliable; terminal app for your phone."
+        },
+        {
+            "link": "https://sourceforge.net/projects/opencamera/",
+            "name": "Open Camera",
+            "tag": "Extended control for your camera module."
+        },
+        {
+            "link": "https://f-droid.org/en/packages/io.github.muntashirakon.AppManager/",
+            "name": "AppManager",
+            "tag": "it's in the name"
         }
     ],
     "rnggamelist": [
@@ -473,6 +439,11 @@
             "tag": "Good Nvidia support"
         },
         {
+            "link": "https://github.com/mewity1816/archangel-linux",
+            "name": "Archangel Linux",
+            "tag": "shameless self promotion never hurt anyone"
+        },
+        {
             "link": "https://tails.net/",
             "name": "Tails",
             "tag": "Privacy centered, nothing is logged"
@@ -559,14 +530,14 @@
             "tag": "CSS part of the website"
         },
         {
-            "link": "https://int10h.org/",
-            "name": "INT10H",
-            "tag": "Main font"
-        },
-        {
             "link": "https://www.geeksforgeeks.org/",
             "name": "geeksforgeeks",
             "tag": "Both"
+        },
+        {
+            "link": "https://fonts.google.com/",
+            "name": "google font",
+            "tag": "font"
         },
         {
             "link": "https://github.com/glreno/oneko",
@@ -575,7 +546,7 @@
         },
         {
             "name": "Discord user 'mewity'",
-            "xoxo": "just know i'll miss you"
+            "exec": "mwrtng()"
         }
     ],
     "quotes": [
@@ -586,7 +557,8 @@
                 "i just wanna get geeked all night",
                 "if i hit you with a W-Y-D you better not hit me with an H-E-Y",
                 "so retro",
-                "funding for this program was made possible by viewers like you"
+                "funding for this program was made possible by viewers like you",
+                "pick me up!"
             ]
         }
     ]

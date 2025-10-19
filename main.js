@@ -1,7 +1,7 @@
 const offset = -3;
 const clock = document.getElementById("clock");
 const player = document.getElementById("player");
-
+let playing = false;
 function padzero(number) {
     if (number < 10) {
         return "0" + String(number)
@@ -25,6 +25,10 @@ setInterval(() => {
 }, 100);
 
 async function play() {
+    if (playing) {
+        return;
+    }
+    playing = true;
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
     const response = await fetch("fantasia2009.opus");
     const arrayBuffer = await response.arrayBuffer();

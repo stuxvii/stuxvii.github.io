@@ -1,0 +1,69 @@
+:root {
+    --c1: #000;
+    --text: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+}
+@font-face {
+    font-family: pxl;
+    src: url("fnt/04b03.woff2");
+}
+body {
+    background-color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    image-rendering: pixelated;
+    background-image: url("img/rb.png");
+    cursor: url("img/arrow.cur"), default;
+    font-family: pxl;
+}
+.navbar {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 32;
+}
+.items-box {
+    display:flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.mid-mid__center {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    z-index: -1;
+}
+#categories {
+    display:flex;
+    justify-content: space-between;
+    gap: 0.5vw;
+}
+#categories > span {
+    cursor: pointer;
+}
+.main_label {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5em;
+    gap: 0.5em;
+}
+.main_label > a {
+    z-index: 32;
+
+}
+.desc {
+    background-color: dimgrey;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    border: #fff solid 1px;
+}

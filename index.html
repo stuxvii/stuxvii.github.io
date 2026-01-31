@@ -1,58 +1,29 @@
 <!DOCTYPE html>
-
+<!-- i took the time to optimize this to hell so it loads fast on a gprs connection -->
 <head>
     <title>acidbox</title>
     <meta charset="UTF-8">
-    <link href="style.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
     <link href="favicon.ico" rel="icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
-    <div class="colorizer"></div>
-    <!-- who said you need GUI drag and drop website editors to make something that looks and feels good? -->
-    <!-- Fuck straw.page -->
-    <!-- Written fully by @acdbx/stuxvii/@acidbox93 -->
-    <div style="display:flex;align-items: center;flex-direction: column;">
+    <div class="navbar">
+        <span>acdbx.top</span>
+        <div id="categories"></div>
         <div>
-            It is currently
-            <span id="clock">--:--:--</span>
-            for me.
+            <a title="GitHub" href="https://github.com/stuxvii/">GH</a>
+            <a title="Telegram" href="https://t.me/acidbox93">TL</a>
+            <a title="Discord" href="#" onclick="alert('@acdbx')">DC</a>
+            <a title="Email" href="mailto:me@acdbx.top">@</a>
+            <a title="Mewity Rating" href="/mwrtng/">MWT</a>
         </div>
-        <div style="display:flex;align-items: center;flex-direction: row;">
-            <div class="center onesize">
-                they/them
-                <span>Main dev for
-                    <a href="https://lsdblox.cc">
-                        <img style="height:1rem;" src="lsdblox.gif">
-                    </a>
-                </span>
-                <a href="https://github.com/stuxvii/">My GitHub</a>
-                <div class="spacebetween">
-                    <span>JS</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>PHP</span>
-                    <span>PY</span>
-                    <span>PB</span>
-                </div>
-                <div class="spacebetween">
-                    <a title="Telegram" href="https://t.me/acidbox93">TL</a>
-                    <a title="Matrix" href="#" onclick="alert('@acidbox:matrix.org')">MT</a>
-                    <a title="Discord" href="#" onclick="alert('@acdbx')">DC</a>
-                    <a title="YouTube" href="https://www.youtube.com/@acidbox93">YT</a>
-                    <a title="Email" href="mailto:admin@lsdblox.cc">@</a>
-                </div>
-            </div>
-            <div class="center onesize">
-                <a href="music.html">List of music I enjoy</a>
-                <a href="articles/decompbartbash.html">Decompilating Bart Bash (Godot)</a>
-                <a href="articles/macosxemu.html">Mac OS X on QEMU Guide</a>
-                <a href="mwrtng/">Mewity Rating</a>
-            </div>
-        </div>
-        <script src="main.js"></script>
     </div>
-</body>
+    <div class="mid-mid__center">
+        <div class="items-box" id="items-box">
 
+        </div>
+    </div>
+    <script src="assets/list.js"></script>
+</body>
 </html>

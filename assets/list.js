@@ -1,4 +1,5 @@
 let iosjailbreak = {
+    "JailbreakMe 1.0 Source": {url: "https://github.com/OpenJailbreak/JailbreakMe-1.0", desc: "iOS 1.0.2 - 1.1.1 | please just update"},
     "JailbreakMe 2.0": {url: "https://www.jailbreakme.com/star", desc: "iOS 3.1.2 - 4.0.1 (except 3.2.2)"},
     "JailbreakMe 3.0": {url: "https://www.jailbreakme.com/", desc: "iOS 4.2.6 - 4.3.3"},
     "Carbon": {url: "https://carbon.sep.lol/", desc: "iOS 9.1 - 9.3.4"},
@@ -7,6 +8,7 @@ let iosjailbreak = {
     "tnssockport": {url: "https://lukezgd.github.io/tns-sockport/", desc: "iOS 10 (not iPhone 7/7 Plus)"}
 }
 let games = {
+    "Flashpoint Archive": {url: "https://flashpointarchive.org/", desc: "MASSIVE Plugin-era collection of media, most notably Flash."},
     "SM4J": {url: "https://carlosxdjavgames.altervista.org/archivos/134", desc: "Hello Mario Engine game with multiplayer and nice community."},
     "Mindustry": {url: "https://mindustrygame.github.io/", desc: "Addictive grinding and engineering game."},
     "Haxball": {url: "https://haxball.com", desc: "Physics centric multiplayer soccer game"},
@@ -15,7 +17,7 @@ let games = {
     "Sober": {url: "https://sober.vinegarhq.org", desc: "Android version of Roblox natively running on Linux"},
     "SuperTuxKart": {url: "https://supertuxkart.net", desc: "FOSS racing game"},
     "Sonolus": {url: "https://sonolus.com", desc: "Client for rhythm game servers and engines, recommended for SEKAI"},
-    "N": {url: "https://thewayoftheninja.org", desc: "The world's best platformer game. Thousands of levels."},
+    "n": {url: "https://thewayoftheninja.org", desc: "The world's best platformer game. Thousands of levels."},
     "Happy Wheels": {url: "https://totaljerkface.com/happy_wheels.tjf", desc: "Classic gory browser game"},
 }
 let credits = {
@@ -42,11 +44,11 @@ let tools = {
     "Simple Web Server": {url: "https://simplewebserver.org", desc: ""},
 };
 let category = {
-    "Tools": tools,
-    "Games": games,
+    "tools": tools,
+    "games": games,
     "iOS Jailbreak": iosjailbreak,
-    "Linux": linux,
-    "Credits": credits
+    "linux": linux,
+    "credits": credits
 };
 
 let itemsBox = document.getElementById("items-box");
@@ -54,33 +56,32 @@ let categories = document.getElementById("categories");
 
 function loadCategory(cat) {
     let items = category[cat]
-    itemsBox.innerHTML = "";
+    itemsBox.innerHTML = null;
     for (let key in items) {
-        console.log(key);
-        let div = document.createElement("div");
+        let mainContainer = document.createElement("div");
 
-        let main_label = document.createElement("div");
-        main_label.className = "main_label"
+        let label = document.createElement("div");
+        label.className = "main_label"
 
         let name = document.createElement("span");
         name.textContent = key;
 
-        let link = document.createElement("a");
-        link.textContent = "go";
-        link.href = category[cat][key].url;
+        let goBtn = document.createElement("a");
+        goBtn.textContent = "go";
+        goBtn.href = category[cat][key].url;
 
-        main_label.append(name);
-        main_label.append(link);
+        label.append(name);
+        label.append(goBtn);
 
         let description = document.createElement("span");
         description.textContent = category[cat][key].desc;
         description.className = "desc"
 
-        div.append(main_label);
-        div.append(description);
-        div.className = "item"
+        mainContainer.append(label);
+        mainContainer.append(description);
+        mainContainer.className = "item"
 
-        itemsBox.append(div);
+        itemsBox.append(mainContainer);
     }
 }
 

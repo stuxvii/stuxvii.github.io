@@ -10,6 +10,9 @@
 @font-face {
     font-family: pxl;
     src: url("fnt/04b03.woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 body {
     background-color: #000;

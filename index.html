@@ -1,73 +1,28 @@
 <!DOCTYPE html>
+
 <head>
-<title>acidbox</title>
-<meta charset="UTF-8">
-<link href="style.css" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acidbox</title>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-<div class="navbar">
-<span id="restore-btn">home</span>
-<div id="categories"></div>
-<div>
-<a title="GitHub" href="https://github.com/stuxvii/">GH</a>
-<a title="Email" href="mailto:me@acdbx.top">@</a>
-</div>
-</div>
-<div class="mid-mid__center" id="content"></div>
-<div class="mid-mid__center">
-    <div id="x">
-        <script>
-            const text = "acdbx.top"
-            let c = document.createElement("canvas");
-            const ctx = c.getContext("2d");
-            c.textContent = "Your browser is a prehistoric piece of garbage";
-            c.height = 64;
-            c.width = 256;
-            document.getElementById("x").append(c);
-            const myFont = new FontFace('dh', 'url(fnt/dh.woff2)');
-            ctx.fillStyle = "#fff"
-
-            function draw() {
-                ctx.clearRect(0, 0, c.width, c.height);
-
-                const time = performance.now() * 0.005;
-                for (let i = 0; i < text.length; i++) {
-                    const sine = Math.sin(time + i) * 4;
-                    const x = i * 29;
-                    let y = sine + c.height / 2;
-                    y += 12
-                    const angle = Math.sin(time + i) * (2 * Math.PI / 180);
-
-                    ctx.save();
-                    ctx.translate(x, y);
-                    ctx.rotate(angle);
-                    ctx.fillText(text[i], 0, 0);
-                    ctx.restore();
-                }
-                
-                requestAnimationFrame(draw);
-            }
-
-            myFont.load().then((font) => {
-                document.fonts.add(font);
-                ctx.font = "64px dh";
-                requestAnimationFrame(draw);
-            });
-        </script>
-        <div style="border:1px solid white;padding:1rem;">
-            <span>hi i am acidbox my country is in shambles</span>
-            <br>
-            <span>what you will find in this page:</span>
-            <ul>
-                <li>links to resources</li>
-                <li>guides</li>
-                <li>schizoposts</li>
-            </ul>
-            <span>enjoy your stay</span>
+    <div class="navbar">
+        <span id="restore-btn" style="cursor:pointer;">home</span>
+        <div id="categories"></div>
+        <div>
+            <a title="GitHub" href="https://github.com/stuxvii/">GH</a>
+            <a title="GitHub" href="https://buymeacoffee.com/acidbox">&lt;3</a>
+            <a title="Email" href="mailto:me@acdbx.top">@</a>
         </div>
     </div>
-</div>
-<script src="list.js"></script>
+    <div class="mid-mid__center">
+        <div id="content"></div>
+    </div>
+    <script src="js/logo.js"></script>
+    <script src="js/md.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
+
 </html>

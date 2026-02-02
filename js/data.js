@@ -53,44 +53,11 @@ let webtools = {
     "Yout": { url: "https://yout.com/", desc: "Download social media content" },
     "FMHY": { url: "https://fmhy.net/", desc: "Massive repository of free media, utilities, everything you need bro. Heck yeah!" },
 };
-let category = {
+export let category = {
     "software": software,
     "web": webtools,
     "games": games,
     "iOS": ios,
     "linux": linux,
-    "xtra": info
+    "xtra": info,
 };
-
-let content = document.getElementById("content");
-let categories = document.getElementById("categories");
-
-function loadCategory(cat) {
-    content.innerHTML = "";
-    const box = document.createElement("div");
-    box.className = "items-box";
-    content.style.display = "flex";
-    document.getElementById("x").style.display = "none";
-
-    Object.entries(category[cat]).forEach(([name, { url, desc }]) => {
-        const item = document.createElement("div");
-        item.className = "item";
-        item.innerHTML = `<a class="main_label" href="${url}"><span>${name}</span></a>${desc ? `<span class="desc">${desc}</span>` : ""} `;
-        box.append(item);
-    });
-
-    content.append(box);
-}
-
-document.getElementById("restore-btn").addEventListener("click", () => {
-    content.style.display = "none";
-    document.getElementById("x").style.display = "flex";
-    console.log("ya")
-});
-
-for (let key in category) {
-    let el = document.createElement("span");
-    el.textContent = key;
-    el.addEventListener("click", () => loadCategory(key));
-    categories.append(el);
-}

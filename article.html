@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+    <title>acidbox</title>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="navbar">
+        <a id="restore-btn" style="cursor:pointer;" href="/">home</a>
+    </div>
+    <div class="mid-mid__center">
+        <div id="content" style="padding: 1rem;"></div>
+    </div>
+    <script src="js/md.js"></script>
+    <script type="module">const u=new URL(window.location.toLocaleString()).searchParams;const md=new MiniGFM({unsafe:true});const f=u.get('f');if(!f){window.location.href = '/';}const t=await(await fetch(`/md/${f}.md`)).text();const m=document.getElementById("content");m.innerHTML = md.parse(t);</script>
+</body>
+
+</html>

@@ -53,11 +53,15 @@ let webtools = {
     "Yout": { url: "https://yout.com/", desc: "Download social media content" },
     "FMHY": { url: "https://fmhy.net/", desc: "Massive repository of free media, utilities, everything you need bro. Heck yeah!" },
 };
+let posts = {
+    "tech rant": {url: "/article.html?f=tech", desc: "3rd of february 2025"},
+}
 export let category = {
     "software": software,
     "web": webtools,
     "games": games,
     "iOS": ios,
     "linux": linux,
+    "posts": posts,
     "xtra": info,
 };

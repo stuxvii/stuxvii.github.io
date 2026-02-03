@@ -58,6 +58,9 @@ let webtools = {
 let posts = {
     "tech rant": {url: "/article.html?f=tech", desc: "3rd of february 2025"},
 }
+let guides = {
+    "quick no fuzz arch bios grub mbr setup": {url: "/article.html?f=arch", desc: "3rd of february 2025"},
+}
 export let category = {
     "software": software,
     "web": webtools,
@@ -65,5 +68,6 @@ export let category = {
     "iOS": ios,
     "linux": linux,
     "posts": posts,
+    "guides": guides,
     "xtra": info,
 };

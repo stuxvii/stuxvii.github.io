@@ -50,7 +50,9 @@ let software = {
 let webtools = {
     "Virustotal": { url: "https://virustotal.com/gui/home/upload", desc: "Scan files for known malware" },
     "Jotti's malware scan": { url: "https://virusscan.jotti.org/", desc: "Scan files for known malware - alt" },
-    "Yout": { url: "https://yout.com/", desc: "Download social media content" },
+    "Cobalt": { url: "https://cobalt.tools/", desc: "Download social media content"},
+    "Cobalt - meowing.de": { url: "https://cobalt.meowing.de/", desc: "Download social media content - alt"},
+    "Yout": { url: "https://yout.com/", desc: "Download social media content - alt 2"},
     "FMHY": { url: "https://fmhy.net/", desc: "Massive repository of free media, utilities, everything you need bro. Heck yeah!" },
 };
 let posts = {

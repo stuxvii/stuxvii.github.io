@@ -13,6 +13,7 @@ let games = {
     "Mindustry": { url: "https://mindustrygame.github.io/", desc: "Addictive grinding and engineering game." },
     "Haxball": { url: "https://haxball.com", desc: "Physics centric multiplayer soccer game" },
     "Prism Launcher": { url: "https://haxball.com", desc: "Minecraft launcher with instance managing" },
+    "SimByte": { url: "/game", desc: "Yk that \"BitLife\" game? It's my take on it. on heavy alpha." },
     "Acid Launcher": { url: "https://github.com/stuxvii/acid-launcher", desc: "Lightweight and simple Minecraft Launcher with built-in Fabric downloading" },
     "Sober": { url: "https://sober.vinegarhq.org", desc: "Android version of Roblox natively running on Linux" },
     "SuperTuxKart": { url: "https://supertuxkart.net", desc: "FOSS racing game" },

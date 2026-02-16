@@ -112,6 +112,7 @@ class Person {
         intelligence = rand_int(100),
         looks = rand_int(100),
         health = 80 + rand_int(20), // cant be unfair with everything
+        respect = (happiness + looks)/2,
     } = {}) {
         this.age = age;
         this.money = money;
@@ -124,6 +125,7 @@ class Person {
         this.intelligence = intelligence;
         this.looks = looks;
         this.health = health;
+        this.respect = respect;
 
         this.careerPotential = Math.max(
             (this.intelligence * 1.5) + (this.looks * 0.5),
@@ -140,6 +142,7 @@ let your = new Person();
 
 let meter_elements = {};
 const stats = {
+    respect: "🤝",
     happiness: "☺️",
     intelligence: "💡",
     health: "💊",
@@ -180,7 +183,7 @@ function update_meters() {
         let person = your.family[entry]["person"];
         let relation = your.family[entry]["relation"];
         let new_entry = document.createElement("span");
-        new_entry.textContent = person.gender + " " + Relation.getString(relation).toLowerCase() + " - " + person.name + " " + person.surname + " - " + person.age;
+        new_entry.textContent = `${person.gender} ${Relation.getString(relation).toLowerCase()} - ${person.name} ${person.surname} - ${person.age}`;
         infoBox.append(new_entry);
     }
     yourInfo.textContent = your.name + " " + your.surname + " - §" + your.money;
@@ -224,11 +227,11 @@ function begin() {
     update_meters();
 
     header("Age: 0. Welcome to Fortnite.");
-    print("I was born a " + your.gender + ". My name is " + your.name + " " + your.surname);
-    print("I was born on the fateful day of " + your.birthday.toLocaleString('default', { month: 'long' }) + " " + your.birthday.getDate() + ", as a " + new ZodiacSign(your.birthday).sign);
+    print(`I was born a ${your.gender}. My name is ${your.name} ${your.surname}`);
+    print(`I was born on the fateful day of ${your.birthday.toLocaleString('default', { month: 'long' })} ${your.birthday.getDate()}, as a ${new ZodiacSign(your.birthday).sign}`);
     space();
-    print("My father is " + father.name + " " + father.surname + " of " + father.age + " years old");
-    print("My mother is " + mother.name + " " + mother.surname + " of " + mother.age + " years old");
+    print(`My father is ${father.name} ${father.surname} of ${father.age} years old`);
+    print(`My mother is ${mother.name} ${mother.surname} of ${mother.age} years old`);
 }
 
 function print(urtext) {
@@ -364,14 +367,29 @@ const eventPool = [
     new LifeEvent({
         id: "bully_encounter",
         title: "Bully",
-        description: "Someone named Quantavious is harassing you.",
-        chance: 0.5,
+        description: () => "Someone named " + boy_names[rand_int(boy_names.length)] + " is harassing you.",
+        chance: 1,
         minAge: 6,
         maxAge: 14,
-        criteria: (p) => p.looks < 40,
+        criteria: (p) => p.looks < 40 || p.respect < 40,
         effect: (p) => {
             p.happiness -= 5;
-            print("Quantavious said you resembled the 67 kid. It hurt a lil.");
+            presentChoice("Will you let this slide?", [
+                {
+                    text: "Just ignore them.",
+                    callback: () => {
+                        p.intelligence += 5;
+                    }
+                },
+                {
+                    text: "Kick them in the stomach.",
+                    callback: () => {
+                        p.respect += 5;
+                        p.happiness += 15;
+                        print("Bullies are now scared of you.");
+                    }
+                }
+            ]);
         }
     }),
     new LifeEvent({

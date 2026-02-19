@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <a id="takeMeHome" href="/"></a>
+    <script>
+        let theta = 0;
+        const r = 50;
+        const speed = 143;
+        function draw() {
+            ctx.font = "64px pxl";
+            ctx.clearRect(0, 0, c.width, c.height);
+            text = "404"
+            
+            theta += Math.PI / speed
+
+            for (let i = 0; i < text.length; i++) {
+                // sourced this math from https://editor.p5js.org/MathBase/sketches/gJQ6p2AiS
+                let x = ((c.height / 2) + r * Math.cos(theta + (i)));
+                let y = ((c.width / 2) + r * Math.sin(theta + (i*3)));
+                x -= 14;
+                ctx.save();
+                ctx.translate(x, y);
+                ctx.fillText(text[i], 0, 0);
+                ctx.restore();
+            }
+
+            requestAnimationFrame(draw);
+        }
+
+        function init() {
+            c = document.createElement("canvas");
+            ctx = c.getContext("2d");
+            c.textContent = "404";
+            c.height = 256;
+            c.width = 256;
+            takeMeHome.prepend(c);
+            ctx.fillStyle = "#fff"
+            requestAnimationFrame(draw);
+        }
+        init();
+    </script>
+</body>
+
+</html>

@@ -64,7 +64,7 @@ export const eventPool = [
                 {
                     text: "Fight them.",
                     callback: () => {
-                        if (p.strength > rand_int(40) + p.strength/2) {
+                        if (p.strength > rand_int(50) + 40) {
                             p.happiness += 15;
                             p.money += rand_int(20) + 5;
                             p.strength += 5;
@@ -79,7 +79,11 @@ export const eventPool = [
                 {
                     text: "Give it up.",
                     callback: () => {
-                        p.money /= 2;
+                        if (p.money <= 0) {
+                            print("You had nothing to give.");
+                        } else {
+                            p.money /= 2;
+                        }
                     }
                 }
             ]);

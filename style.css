@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: pxl;
-    src: url("fnt/04b03.woff2");
+    src: url("fnt/terminus_bold.ttf");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -21,7 +21,7 @@ body {
     background-color: #000;
     font-family: Arial, Helvetica, sans-serif;
     image-rendering: pixelated;
-    background-image: url("img/rb.png");
+    background-image: url("img/cats.png");
     cursor: url("img/arrow.cur"), default;
     font-family: pxl;
     height: 100vh;

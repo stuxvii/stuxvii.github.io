@@ -137,7 +137,11 @@ function begin() {
     mother.strength = mother.health/2 + rand_int(mother.health/2);
     father.strength = father.health/2 + rand_int(father.health/2);
 
-    state.your.gender = 0 == rand_int(2) ? "male" : "female";
+    if (rand_int(500) == 255) {
+        state.your.gender = "intersex";
+    } else {
+        state.your.gender = 0 == rand_int(2) ? "male" : "female";
+    }
     state.your.name = state.your.gender == "male" ? boy_names[rand_int(boy_names.length)] : girl_names[rand_int(girl_names.length)];
     state.your.surname = common_surname;
 
@@ -152,7 +156,7 @@ function begin() {
     update_meters();
 
     header("Age: 0. Welcome to Fortnite.");
-    print(`I was born a ${state.your.gender}. My name is ${state.your.name} ${state.your.surname}`);
+    print(`I was born ${state.your.gender}. My name is ${state.your.name} ${state.your.surname}`);
     print(`I was born on the fateful day of ${state.your.birthday.toLocaleString('default', { month: 'long' })} ${state.your.birthday.getDate()}, as a ${new ZodiacSign(state.your.birthday).sign}`);
     space();
     print(`My father is ${father.name} ${father.surname} of ${father.age} years old`);
@@ -196,6 +200,9 @@ function processYearlyEvents(person) {
                 state.your[key] += effect[key];
             }
         });
+        if (effect.monetary) {
+            state.your[key] += effect[key];
+        }
     }
 
     eligibleEvents.forEach(event => {

@@ -187,7 +187,7 @@ export const eventPool = [
 export const addictions = {
     nicotine: new Effect({
         health: -5,
-        happiness: -25,
+        happiness: -5,
         monetary: -10,
         icon: "🚬",
         name: "Tobacco",

@@ -137,22 +137,21 @@ export class Occupation {
 
 export class Effect {
     constructor({
-        // THESE ARE MULTIPLIERS!!
-        health_impact = 0.0,
-        happiness_impact = 0.0,
-        intelligence_impact = 0.0,
-        looks_impact = 0.0,
-        monetary_impact = 0.0,
+        health = 0.0,
+        happiness = 0.0,
+        intelligence = 0.0,
+        looks = 0.0,
+        monetary = 0.0,
 
         icon = "",
         name = "",
         description = "",
     } = {}) {
-        this.health_impact = health_impact;
-        this.happiness_impact = happiness_impact;
-        this.intelligence_impact = intelligence_impact;
-        this.looks_impact = looks_impact;
-        this.monetary_impact = monetary_impact;
+        this.health = health;
+        this.happiness = happiness;
+        this.intelligence = intelligence;
+        this.looks = looks;
+        this.monetary = monetary;
         this.icon = icon;
         this.name = name;
         this.description = description;

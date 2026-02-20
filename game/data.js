@@ -186,18 +186,18 @@ export const eventPool = [
 
 export const addictions = {
     nicotine: new Effect({
-        health_impact: -5,
-        happiness_impact: -25,
-        monetary_impact: -10,
+        health: -5,
+        happiness: -25,
+        monetary: -10,
         icon: "🚬",
         name: "Tobacco",
         description: "It's poison for you."
     }),
     alcoholism: new Effect({
-        health_impact: -1,
-        happiness_impact: -5,
-        intelligence_impact: -5,
-        monetary_impact: -40,
+        health: -1,
+        happiness: -5,
+        intelligence: -5,
+        monetary: -40,
         icon: "🍺",
         name: "Alcohol",
         description: "Numbs the mind."
@@ -212,7 +212,6 @@ export const consumables = {
         spicyness: 0.0,
         bitterness: 0.0,
         crunchyness: 0.3,
-        widthdrawal: 0.01,
         price: 2
     }),
     potato_chips: new Consumable({
@@ -222,7 +221,6 @@ export const consumables = {
         spicyness: 0.2,
         bitterness: 0.0,
         crunchyness: 0.6,
-        widthdrawal: 0.01,
         price: 2
     }),
     cigarettes: new Consumable({
@@ -232,7 +230,7 @@ export const consumables = {
         spicyness: 0.0,
         bitterness: 0.75,
         crunchyness: 0.1,
-        widthdrawal: 1.0,
+        widthdrawal: addictions["nicotine"],
         price: 5
     }),
     beer: new Consumable({
@@ -242,7 +240,7 @@ export const consumables = {
         spicyness: 0.0,
         bitterness: 0.8,
         crunchyness: 0.1,
-        widthdrawal: 0.1,
+        widthdrawal: addictions["alcoholism"],
         price: 5
     }),
 };
@@ -260,24 +258,37 @@ export const infoBoxPanels = {
         }
     },
     shop: () => {
-        for (let item in shopItems) {
-            let name = shopItems[item]["name"];
-            let price = shopItems[item]["price"];
+        for (let i in shopItems) {
+            let item = shopItems[i];
+            let name = item["name"];
+            let price = item["price"];
             let new_entry = document.createElement("button");
             new_entry.textContent = `${name} - $${price}`;
             new_entry.onclick = () => {
                 if (state.your.money >= price) {
-                    let softness_match = shopItems[item].softness * state.your.softness;
-                    let sweetness_match = shopItems[item].sweetness * state.your.sweetness;
-                    let spicyness_match = shopItems[item].spicyness * state.your.spicyness;
-                    let bitterness_match = shopItems[item].bitterness * state.your.bitterness;
-                    let crunchyness_match = shopItems[item].crunchyness * state.your.crunchyness;
+                    state.your.money -= price;
+
+                    let softness_match = item.softness * state.your.softness;
+                    let sweetness_match = item.sweetness * state.your.sweetness;
+                    let spicyness_match = item.spicyness * state.your.spicyness;
+                    let bitterness_match = item.bitterness * state.your.bitterness;
+                    let crunchyness_match = item.crunchyness * state.your.crunchyness;
+
                     let total_enjoyment = softness_match + sweetness_match + spicyness_match + bitterness_match + crunchyness_match;
+
                     total_enjoyment *= 20;
                     total_enjoyment = Math.floor(total_enjoyment);
+
                     state.your.happiness += total_enjoyment;
-                    state.your.money -= price;
+
                     print(`You bought and consumed ${name}, it made you ${total_enjoyment}% happier`)
+                    if (item.widthdrawal) {
+                        if (rand_int(2) == 0) {
+                            state.your.effects.push(item.widthdrawal);
+                            noticeSFX.play();
+                            print(`You now have a ${item.widthdrawal.name} addiction.`);
+                        }
+                    }
                     state.canInteract = true;
                 } else {
                     print(`You don't have enough money for ${name}, you need $${price-state.your.money} more`);

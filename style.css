@@ -36,11 +36,21 @@ body {
     z-index: 32;
     width: 100%;
 }
-
+.navbar > * {
+    background-color: var(--c1);
+    padding: 5px;
+    border: 1px var(--text) solid;
+}
 #categories {
     display: flex;
     justify-content: space-between;
     gap: 0.5vw;
+}
+
+#content {
+    background-color: var(--c1);
+    padding: 5px;
+    border: 1px var(--text) solid;
 }
 
 #categories>span {

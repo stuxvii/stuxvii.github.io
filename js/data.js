@@ -22,7 +22,7 @@ let games = {
     "Happy Wheels": { url: "https://totaljerkface.com/happy_wheels.tjf", desc: "Classic gory browser game" },
 }
 let info = {
-    "04b03": { url: "http://www.dsg4.com/04/", desc: "Site font" },
+    "Terminus": { url: "https://files.ax86.net/terminus-ttf/", desc: "Site font" },
     "Double Homicide": { url: "https://www.dafont.com/doublehomicide.font", desc: "Title font" },
     "GitHub Pages": { url: "https://docs.github.com/en/pages", desc: "Static hosting" },
     "Mewity rating": { url: "/mwrtng", desc: "" },

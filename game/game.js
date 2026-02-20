@@ -35,17 +35,73 @@ export function update_meters() {
     for (let key in meter_elements) {
         meter_elements[key].style.setProperty("--p", state.your[key]);
     }
+
     infoBox.innerHTML = null;
+
     let close_btn = document.createElement("span");
     close_btn.textContent = "x";
     close_btn.style.cursor = "pointer";
     close_btn.style.textDecoration = "underline";
+
     close_btn.addEventListener("click", function (e) {
         infoBox.style.display = "none";
     });
+
     infoBox.append(close_btn);
 
     currentIBPanel.call();
+
+    effectsList.innerHTML = null;
+
+    console.log(state.your);
+    for (let e in state.your.effects) {
+        const effect = state.your.effects[e];
+        let effectDiv = document.createElement("div");
+        let iconSpan = document.createElement("span");
+        iconSpan.textContent = effect.icon;
+        effectDiv.append(iconSpan);
+
+        let infoDiv = document.createElement("div");
+        infoDiv.style.display = "none";
+
+        effectDiv.append(infoDiv);
+
+        let nameDiv = document.createElement("div");
+        let effectName = document.createElement("strong");
+        effectName.textContent = effect.name;
+        nameDiv.append(effectName);
+
+        infoDiv.append(nameDiv);
+
+        let descDiv = document.createElement("div");
+        descDiv.classList.add("flexColumn")
+        let descText = document.createElement("span");
+        descText = effect.description;
+
+        descDiv.append(descText);
+
+        Object.entries(stats).forEach(([key, _]) => {
+            if (effect[key]) {
+                let textElement = document.createElement("span");
+                textElement.textContent = effect[key] + " " + key + ".";
+                descDiv.append(textElement);
+            }
+        });
+        
+        effectDiv.addEventListener("click", function (e) {
+            if (infoDiv.style.display == "none") {
+                infoDiv.style.display = ""
+                nameDiv.prepend(iconSpan);
+            } else {
+                effectDiv.append(iconSpan);
+                infoDiv.style.display = "none"
+            }
+        });
+
+        infoDiv.append(descDiv);
+        effectDiv.append(infoDiv);
+        effectsList.append(effectDiv);
+    }
 
     state.your.happiness = clamp(state.your.happiness, 0, 100);
     state.your.intelligence = clamp(state.your.intelligence, 0, 100);
@@ -132,6 +188,15 @@ function clamp(num, min, max) {
 
 function processYearlyEvents(person) {
     const eligibleEvents = eventPool.filter(ev => ev.isEligible(person));
+
+    for (let e in state.your.effects) {
+        const effect = state.your.effects[e];
+        Object.entries(stats).forEach(([key, _]) => {
+            if (effect[key]) {
+                state.your[key] += effect[key];
+            }
+        });
+    }
 
     eligibleEvents.forEach(event => {
         if (Math.random() < event.chance) {

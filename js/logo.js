@@ -1,5 +1,6 @@
 function draw() {
     ctx.clearRect(0, 0, c.width, c.height);
+    ctx.imageSmoothingEnabled = false
     text = "welcome"
     const time = performance.now() * 0.005;
     for (let i = 0; i < text.length; i++) {

@@ -1,0 +1,3 @@
+[submodule "simbyte"]
+	path = simbyte
+	url = https://github.com/stuxvii/simbyte.git

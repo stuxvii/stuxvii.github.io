@@ -1,2 +1,6 @@
 cdn/
 simbyte
+gc
+/game/*
+*.php
+.*
